@@ -1,0 +1,49 @@
+#nav{
+	text-align: center;
+	font-size: 20px;
+	word-spacing: 10px; 
+}
+/*ul的样式*/
+#nav ul{
+	list-style: none;
+}
+/*li的展示样式*/
+#nav ul li{
+	float:center;
+	width:20px;
+	height:20px;
+	background:white;
+	display: inline;
+}
+#nav a{text-decoration: none;color:black;}
+#nav a:hover {background: green;color:white;}
+
+#in{
+	text-align:center;
+	font-size: 20px;
+}
+#in input{
+	width:460px;
+	height:40px;
+	border-width:1px;
+	border-color: black;
+	font-size:20px;
+}
+#in li{
+	list-style:none;
+	display:inline
+}
+#in a{
+	text-decoration: none;
+	color:black;
+}
+#in a:active{
+	color:white;
+	background: green;
+}
+#image{
+	width:50px;
+	height:50px;
+	position:static;
+	
+}

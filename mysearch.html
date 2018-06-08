@@ -19,7 +19,7 @@
         function handleResponse(response){
             for(i = 0; i < response.s.length; i++){
                 if(('\" ' + response.s[i] + '\"').indexOf('\"' + '北京'+ '\"')){
-	                var node = document.createElement("option");
+	                var node = document.createElement("li");
 	                var text = document.createTextNode(response.s[i]); 
 	                node.appendChild(text); 
 	                console.log(response.s[i]);
@@ -35,8 +35,8 @@
             document.createElement("li")
         </script> -->
         <div>
-            <select multiple ="multiple" size = "7" id = "ull" style = "border:0px;width:172px;overflow: hidden" >
-            </select>
+            <ul id = "ull" style = "list-style: none" >
+            </ul>
         </div>
         <!-- <script>
             var ul1 = document.getElementsByTagName("li");

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+</head>
+<body>
+        <input id = "inp1"  type = "text" onkeyup= "chan1(this.value)"/>
+        <button type = "submit" formmethod="post" formaction = urL>搜索</button>
+        <!-- 这个urL有问题的没值 本意是把chan1()里面的取到 但是不知道方法 -->
+        <script>
+           function chan1(textValue){
+                var script = document.createElement('script');
+                var root1 = 'https://www.so.com/s?ie=utf-8&src=dlm&shb=1&hsid=5d5252ca3d1898fc&ls=n728b639592&q=' + textValue;
+                var urL ='\"' + root1 + '\"';
+                script.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=' + textValue + '&cb=handleResponse';
+                document.querySelector('head').appendChild(script);
+        }
+        function handleResponse(response){
+            var ul1 = document.getElementsByTagName("option");
+            for(i = 0; i < response.s.length; i++){
+                console.log(response.s[i]);
+                ul1[i].innerHTML =response.s[i];
+            }
+
+        }
+        function doublec(svalue){
+
+        }
+        </script>
+        <!-- <script> 
+            document.createElement("ul");
+            ul.id = "uul";
+            ul.style.display = none;
+            document.createElement("li")
+        </script> -->
+        <div>
+            <select  multiple ="multiple" ondblclick="doublec(this.value)" size = "7" id = "ull" style = "border:0px;width:172px;overflow: hidden" >
+                <option></option>
+                <option></option>
+                <option></option>
+                <option></option>
+                <option></option>
+                <option></option>
+                <option></option>
+            </ul>
+        </div>
+        <!-- <script>
+            var ul1 = document.getElementsByTagName("li");
+            for (var i1 = 0; i1 < ul1.length; i1++){
+                ul1[i1].innerHTML = ;
+                console.log(ul1[i1]);
+            }
+            console.log(ul1);
+        </script> -->
+    <scripy>
+    </scripy>
+    <p>这个能实现功能但报错了</p>
+</body>
+</html>

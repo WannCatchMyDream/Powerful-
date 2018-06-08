@@ -8,26 +8,7 @@
         <input id = "inp1"  type = "text" onkeyup= "chan1(this.value)"/>
         <button type = "submit" formmethod="post" formaction = urL>搜索</button>
         <!-- 这个urL有问题的没值 本意是把chan1()里面的取到 但是不知道方法 -->
-        <script>
-           function chan1(textValue){
-                var script = document.createElement('script');
-                var root1 = 'https://www.so.com/s?ie=utf-8&src=dlm&shb=1&hsid=5d5252ca3d1898fc&ls=n728b639592&q=' + textValue;
-                var urL ='\"' + root1 + '\"';
-                script.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=' + textValue + '&cb=handleResponse';
-                document.querySelector('head').appendChild(script);
-        }
-        function handleResponse(response){
-            var ul1 = document.getElementsByTagName("option");
-            for(i = 0; i < response.s.length; i++){
-                console.log(response.s[i]);
-                ul1[i].innerHTML =response.s[i];
-            }
-
-        }
-        function doublec(svalue){
-
-        }
-        </script>
+        
         <!-- <script> 
             document.createElement("ul");
             ul.id = "uul";
@@ -53,8 +34,28 @@
             }
             console.log(ul1);
         </script> -->
-    <scripy>
-    </scripy>
     <p>这个能实现功能但报错了</p>
+
+    <script>
+       function chan1(textValue){
+            var script = document.createElement('script');
+            var root1 = 'https://www.so.com/s?ie=utf-8&src=dlm&shb=1&hsid=5d5252ca3d1898fc&ls=n728b639592&q=' + textValue;
+            var urL ='\"' + root1 + '\"';
+            script.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=' + textValue + '&cb=handleResponse';
+            document.querySelector('head').appendChild(script);
+    }
+    function handleResponse(response){
+        var ul1 = document.getElementsByTagName("option");
+        for(i = 0; i < response.s.length; i++){
+            console.log('i:', i);
+            console.log(response.s[i]);
+            ul1[i].innerHTML =response.s[i];
+        }
+
+    }
+    function doublec(svalue){
+
+    }
+    </script>
 </body>
 </html>

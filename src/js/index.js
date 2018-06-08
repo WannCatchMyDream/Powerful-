@@ -8,12 +8,23 @@ function chan1(textValue) {
   document.querySelector('head').appendChild(script);
 }
 
+// 无需每次获取，可用变量缓存之
+// 而且放在 for 循环得多次获取，性能太低
+const suggestionList = document.getElementById("ull");
+
 function handleResponse(response) {
+  // 渲染之前先清空老的数据
+  emptyNode(suggestionList);
+
   for (i = 0; i < response.s.length; i++) {
     var node = document.createElement("li");
     var text = document.createTextNode(response.s[i]);
     node.appendChild(text);
     console.log(response.s[i]);
-    document.getElementById("ull").appendChild(node);
+    suggestionList.appendChild(node);
   }
+}
+
+function emptyNode(node) {
+  node.textContent = '';
 }

@@ -17,13 +17,13 @@
                 document.querySelector('head').appendChild(script);
         }
         function handleResponse(response){
-            for(i = 0; i < response.s.length; i++){
-	                var node = document.createElement("li");
-	                var text = document.createTextNode(response.s[i]);
-	                node.appendChild(text);
-	                console.log(response.s[i]);
-	                document.getElementById("ull").appendChild(node);
-            }
+          for(i = 0; i < response.s.length; i++){
+            var node = document.createElement("li");
+            var text = document.createTextNode(response.s[i]);
+            node.appendChild(text);
+            console.log(response.s[i]);
+            document.getElementById("ull").appendChild(node);
+          }
         }
         </script>
         <!-- <script>

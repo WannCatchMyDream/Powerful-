@@ -14,6 +14,7 @@ const suggestionList = document.getElementById("ull");
 
 function handleResponse(response) {
   // 渲染之前先清空老的数据
+<<<<<<< HEAD
   emptyNode(suggestionList);
   for (i = 0; i < response.s.length; i++) {
     var node = document.createElement("li");//创建li标签
@@ -54,3 +55,30 @@ function emptyNode(node) {
   node.textContent = '';
 }
 //
+=======
+  // 为什么把清空操作写成函数吗？虽然才一行代码
+  // 好处是：
+  // 1. 可读性更强。写成 node.textContent = ''; 别人一眼看不上什么意思。写成 emptyNode(suggestionList); 就知道原来是清空节点呀
+  // 2. 易于重构。清空节点有四种写法，假如某天你发现别的方法效率更高你可以只修改该函数，使用到该函数的地方无需一一改动
+  // 3. 便于测试。单测的最小单元是函数
+  clearSuggestions(suggestionList);
+
+  for (i = 0; i < response.s.length; i++) {
+    var node = document.createElement("li");
+    var text = document.createTextNode(response.s[i]);
+    node.appendChild(text);
+    console.log(response.s[i]);
+    suggestionList.appendChild(node);
+  }
+}
+
+/**
+ * 清空下拉提示
+ * @private
+ * @param  {HTMLElement} node 待清空的下拉提示节点
+ * @return {void}
+ */
+function clearSuggestions(suggestionList) {
+  emptyNode(suggestionList);
+}
+>>>>>>> 642ae8a1142ab72995b543a91d556d42d53bd437

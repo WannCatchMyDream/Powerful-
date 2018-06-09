@@ -6,7 +6,7 @@ function jsonp(textValue) {
 
 // 无需每次获取，可用变量缓存之
 // 而且放在 for 循环得多次获取，性能太低
-const suggestionList = document.getElementById("ull");
+const suggestionList = document.getElementById("forDisplay");
 
 function handleResponse(response) {
   // 渲染之前先清空老的数据
@@ -28,34 +28,32 @@ function handleResponse(response) {
     var tvalue = document.getElementById("text").value;
     const sp =(response.s[i]).split(tvalue);
     const bt = document.createElement("b");
+    // 创建<span>标签及样式
+    const redNum = document.createElement("span");
+    redNum.style="color:red"; 
     bt.style.color = "purple";
     node.appendChild(bt);
     if((sp[0] == ""||sp[1] =="") && sp.length >= 2){
       // 实现关键字的高亮
       var nodevalue =tvalue;
       var text = document.createTextNode(nodevalue);
-      var text1 = document.createTextNode(sp[1])
-      console.log('<b>' + tvalue + '</b>' + sp[1]);
-      console.log(response.s);
+      var text1 = document.createTextNode(sp[1]);
+      var text2 = document.createTextNode(i + 1 + " ");
+      if(i + 1 <= 3){
+        node.appendChild(anode).appendChild(redNum).append(text2)
+      }else{
+      node.appendChild(anode).appendChild(text2);
+      }
       node.appendChild(anode).appendChild(bt).appendChild(text);
       node.appendChild(anode).appendChild(text1);
       suggestionList.appendChild(node);
-    }
-    
+      }
     // 实现输入框内容替换
     function addin(){
       document.getElementById("text").value = tvalue + sp[1]; 
     }
-
-    function skip(){
-      var lll = tvalue + sp[1];
-      var urL = "https://www.so.com/s?ie=utf-8&src=dlm&shb=1&hsid=c93169bd520917ab&ls=n728b639592&q=" + lll;
-      console.log(urL);
-      window.location.assign(urL);
-    }
   }
 }
-
 /**
  * 清空下拉提示
  * @private
@@ -65,3 +63,22 @@ function handleResponse(response) {
 function clearSuggestions(suggestionList) {
   emptyNode(suggestionList);
 }
+
+function skip(){
+  var textvalue = document.getElementById("text").value;
+  var urL = "https://www.so.com/s?ie=utf-8&src=dlm&shb=1&hsid=c93169bd520917ab&ls=n728b639592&q=" + textvalue;
+  console.log(urL);
+  window.location.assign(urL);
+}
+
+//测试名字有点随意了。词汇量太少了
+ function textDisplay() {
+  var di = document.getElementById("forDisplay");
+  var s = [1,2,3,4,5,6,7,8,9,10];
+  for (var i = 0; i < 10; i++){
+    var lii = document.createElement("li");
+    var tnode = document.createTextNode(s[i]);
+    lii.appendChild(tnode);
+    di.appendChild(lii);
+  }
+} 

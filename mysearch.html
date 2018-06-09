@@ -4,47 +4,12 @@
     <meta charset="UTF-8">
     <title>search</title>
 </head>
-<body>
-        <input id = "inp1"  type = "text" onkeyup= "chan1(this.value)"/>
-        <button type = "submit" formmethod="post" formaction = urL>搜索</button>
-        <script>
-        	var Tvalue = document.getElementById("inp1").value;
-    	 	var root1 = 'https://www.so.com/s?ie=utf-8&src=dlm&shb=1&hsid=5d5252ca3d1898fc&ls=n728b639592&q=' + Tvalue;
-            var urL ='\"' + root1 + '\"';
-           function chan1(textValue){
-                var script = document.createElement('script');
-                script.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=' + textValue + '&cb=handleResponse';
-                document.querySelector('head').appendChild(script);
-        }
-        function handleResponse(response){
-            for(i = 0; i < response.s.length; i++){
-                if(('\" ' + response.s[i] + '\"').indexOf('\"' + '北京'+ '\"')){
-	                var node = document.createElement("li");
-	                var text = document.createTextNode(response.s[i]); 
-	                node.appendChild(text); 
-	                console.log(response.s[i]);
-	                document.getElementById("ull").appendChild(node);
-                }
-            }
-        }
-        </script>
-        <!-- <script> 
-            document.createElement("ul");
-            ul.id = "uul";
-            ul.style.display = none;
-            document.createElement("li")
-        </script> -->
-        <div>
-            <ul id = "ull" style = "list-style: none" >
-            </ul>
-        </div>
-        <!-- <script>
-            var ul1 = document.getElementsByTagName("li");
-            for (var i1 = 0; i1 < ul1.length; i1++){
-                ul1[i1].innerHTML = ;
-                console.log(ul1[i1]);
-            }
-            console.log(ul1);
-        </script> -->
+    <body>
+    <input id = "inp1"  type = "text" onkeyup= "chan1(this.value)"/>
+    <button onclick = "skip()">搜索</button>
+  <div>
+    <ul id = "ull" style = "list-style: none" ></ul>
+  </div>
+  <script src="./src/js/index.js"></script>
 </body>
 </html>

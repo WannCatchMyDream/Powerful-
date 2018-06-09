@@ -71,14 +71,20 @@ function skip(){
   window.location.assign(urL);
 }
 
-//测试名字有点随意了。词汇量太少了
- function textDisplay() {
-  var di = document.getElementById("forDisplay");
-  var s = [1,2,3,4,5,6,7,8,9,10];
-  for (var i = 0; i < 10; i++){
-    var lii = document.createElement("li");
-    var tnode = document.createTextNode(s[i]);
-    lii.appendChild(tnode);
-    di.appendChild(lii);
+//测试名字有点随意了。词汇量
+ function textDisplay(){
+  var script = document.createElement('script');
+  script.src = 'http://tip.soku.com/search_tip_1?jsoncallback=hotSearch&query=';
+  document.querySelector('head').appendChild(script);
   }
-} 
+
+function hotSearch(hotResponse){
+  var listDisplay = document.getElementById("forDisplay");
+  for(var h = 0; h < hotResponse.r.length; h++){
+    var s[h] = hotResponse.r[h].w;
+    var liDisplay = document.createElement("li");
+    var tnode = document.createTextNode(s[h]);
+    liDisplay.appendChild(tnode);
+    listDisplay.appendChild(liDisplay);
+  }
+}

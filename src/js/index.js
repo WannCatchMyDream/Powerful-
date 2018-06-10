@@ -16,7 +16,7 @@ function handleResponse(response) {
   // 2. 易于重构。清空节点有四种写法，假如某天你发现别的方法效率更高你可以只修改该函数，使用到该函数的地方无需一一改动
   // 3. 便于测试。单测的最小单元是函数
   clearSuggestions(suggestionList);
-
+  var l = 1;
   for (i = 0; i < response.s.length; i++) {
     // 创建 li 标签
     var node = document.createElement("li");
@@ -39,8 +39,9 @@ function handleResponse(response) {
       var nodevalue =tvalue;
       var text = document.createTextNode(nodevalue);
       var text1 = document.createTextNode(sp[1]);
-      var text2 = document.createTextNode(i + 1 + " ");
-      if(i + 1 <= 3){
+      var text2 = document.createTextNode(l + " ");
+      l = l + 1;
+      if(l < 3){
         node.appendChild(anode).appendChild(redNum).append(text2);
       }else{
       node.appendChild(anode).appendChild(text2);

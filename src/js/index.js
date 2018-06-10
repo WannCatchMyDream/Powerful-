@@ -21,18 +21,19 @@ function handleResponse(response) {
     // 创建 li 标签
     var node = document.createElement("li");
     // 创建a标签
-    var anode = document.createElement("a"); 
+    var anode = document.createElement("a");
     anode.style = "text-decoration:none;color:black";
     anode.href = "javascript:void(0)";
     anode.onclick = function(){addin();};
     var tvalue = document.getElementById("text").value;
     const sp =(response.s[i]).split(tvalue);
+    //创建<b>及样式
     const bt = document.createElement("b");
-    // 创建<span>标签及样式
-    const redNum = document.createElement("span");
-    redNum.style="color:red"; 
     bt.style.color = "purple";
     node.appendChild(bt);
+    // 创建<span>标签及样式
+    const redNum = document.createElement("span");
+    redNum.style="color:red";
     if((sp[0] == ""||sp[1] =="") && sp.length >= 2){
       // 实现关键字的高亮
       var nodevalue =tvalue;
@@ -40,7 +41,7 @@ function handleResponse(response) {
       var text1 = document.createTextNode(sp[1]);
       var text2 = document.createTextNode(i + 1 + " ");
       if(i + 1 <= 3){
-        node.appendChild(anode).appendChild(redNum).append(text2)
+        node.appendChild(anode).appendChild(redNum).append(text2);
       }else{
       node.appendChild(anode).appendChild(text2);
       }
@@ -50,7 +51,7 @@ function handleResponse(response) {
       }
     // 实现输入框内容替换
     function addin(){
-      document.getElementById("text").value = tvalue + sp[1]; 
+      document.getElementById("text").value = tvalue + sp[1];
     }
   }
 }
@@ -79,12 +80,36 @@ function skip(){
   }
 
 function hotSearch(hotResponse){
+  clearSuggestions(suggestionList);
+
   var listDisplay = document.getElementById("forDisplay");
-  for(var h = 0; h < hotResponse.r.length; h++){
-    var s[h] = hotResponse.r[h].w;
+  for(var h = 0; h < hotResponse.r.length ; h++){
+    // var s[h = hotResponse.r[h].w;  报错类型：Uncaught SyntaxError: Unexpected token [
+    var redSpan = document.createElement("span");
+    if(h + 1 < 4){
+      redSpan.style = "color:red";
+    }
+    var Anode = document.createElement("a");
+    Anode.href="javascript:void(0)";
+    Anode.style="text-decoration: none;color:black";
+    Anode.onclick = function(){Addin()};
     var liDisplay = document.createElement("li");
-    var tnode = document.createTextNode(s[h]);
-    liDisplay.appendChild(tnode);
+    var tnode = document.createTextNode(h + 1 + ' ');
+    var tNode = document.createTextNode(hotResponse.r[h].w);
+    const displayValue = (hotResponse.r[h].w).split("。");
+    const numBefore = liDisplay.appendChild(Anode).appendChild(tNode);
+    liDisplay.appendChild(Anode).appendChild(redSpan).appendChild(tnode);
+    liDisplay.appendChild(Anode).appendChild(numBefore);
     listDisplay.appendChild(liDisplay);
+
+    function Addin(){
+      document.getElementById("text").value = displayValue[0];
+    }
+  }
+
+  function clearSuggestions(){
+    emptyNode(suggestionList);
   }
 }
+
+// 还有一个bug解决不了

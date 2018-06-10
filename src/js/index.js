@@ -24,7 +24,7 @@ function handleResponse(response) {
     var anode = document.createElement("a");
     anode.style = "text-decoration:none;color:black";
     anode.href = "javascript:void(0)";
-    anode.onclick = function(){addin();};
+    anode.onclick = function(){setText();};
     var tvalue = document.getElementById("text").value;
     const sp =(response.s[i]).split(tvalue);
     //创建<b>及样式
@@ -35,13 +35,14 @@ function handleResponse(response) {
     const redNum = document.createElement("span");
     redNum.style="color:red";
     if((sp[0] == ""||sp[1] =="") && sp.length >= 2){
+
       // 实现关键字的高亮
       var nodevalue =tvalue;
       var text = document.createTextNode(nodevalue);
       var text1 = document.createTextNode(sp[1]);
       var text2 = document.createTextNode(l + " ");
-      l = l + 1;
-      if(l < 3){
+
+      if(l < 4){
         node.appendChild(anode).appendChild(redNum).append(text2);
       }else{
       node.appendChild(anode).appendChild(text2);
@@ -49,9 +50,12 @@ function handleResponse(response) {
       node.appendChild(anode).appendChild(bt).appendChild(text);
       node.appendChild(anode).appendChild(text1);
       suggestionList.appendChild(node);
+      l = l + 1;
       }
+
     // 实现输入框内容替换
-    function addin(){
+    // 以空间换时间（）
+    function setText(){
       document.getElementById("text").value = tvalue + sp[1];
     }
   }
@@ -68,7 +72,7 @@ function clearSuggestions(suggestionList) {
 
 function skip(){
   var textvalue = document.getElementById("text").value;
-  var urL = "https://www.so.com/s?ie=utf-8&src=dlm&shb=1&hsid=c93169bd520917ab&ls=n728b639592&q=" + textvalue;
+  var urL = 'https://www.so.com/s?ie=utf-8&src=dlm&shb=1&hsid=c93169bd520917ab&ls=n728b639592&q=' + textvalue;
   console.log(urL);
   window.location.assign(urL);
 }
@@ -85,6 +89,7 @@ function hotSearch(hotResponse){
 
   var listDisplay = document.getElementById("forDisplay");
   for(var h = 0; h < hotResponse.r.length ; h++){
+
     // var s[h = hotResponse.r[h].w;  报错类型：Uncaught SyntaxError: Unexpected token [
     var redSpan = document.createElement("span");
     if(h + 1 < 4){
@@ -93,7 +98,7 @@ function hotSearch(hotResponse){
     var Anode = document.createElement("a");
     Anode.href="javascript:void(0)";
     Anode.style="text-decoration: none;color:black";
-    Anode.onclick = function(){Addin()};
+    Anode.onclick = function(){document.getElementById("text").value = displayValue[0];};
     var liDisplay = document.createElement("li");
     var tnode = document.createTextNode(h + 1 + ' ');
     var tNode = document.createTextNode(hotResponse.r[h].w);
@@ -103,9 +108,6 @@ function hotSearch(hotResponse){
     liDisplay.appendChild(Anode).appendChild(numBefore);
     listDisplay.appendChild(liDisplay);
 
-    function Addin(){
-      document.getElementById("text").value = displayValue[0];
-    }
   }
 
   function clearSuggestions(){

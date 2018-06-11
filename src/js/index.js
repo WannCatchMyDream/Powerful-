@@ -117,7 +117,14 @@ function render(suggestions) {
     forClick.href='javascript:void(0)';
 
     // 事件委托了解下
-    forClick.onclick = function(){ input.value = displayValue[0];};
+    // forClick.onclick = function(){ input.value = displayValue[0];};
+    suggestionList.addEventListener('click',function(ev){
+      var target = ev.target;
+      console.log('target:', target);
+      if(target.nodeName === 'A'){
+        input.value = target.innerText;
+      }
+    });
 
     var number = document.createTextNode(n);
     var textValue = input.value;
@@ -141,7 +148,7 @@ function render(suggestions) {
       }
 
       // 这行诡异的代码只有你看得懂
-      var displayValue = suggestions[i].split("。");
+      // var displayValue = suggestions[i].split("。");
     }
 
     if(select[0] != '' && select[1] != ''){

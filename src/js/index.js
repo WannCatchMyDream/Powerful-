@@ -5,7 +5,8 @@ suggestionList.addEventListener('click',function(ev){
   var target = ev.target;
   console.log('target:', target);
   if(target.nodeName === 'A'){
-    input.value = target.innerText;
+    var textDisplayValue = (target.innerText).match(/[\u4e00-\u9fa5]+/)
+    input.value = textDisplayValue;
   }
 });
 

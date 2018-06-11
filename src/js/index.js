@@ -1,30 +1,103 @@
-//未输入时显示热搜 hotResponseArray:保存了热搜关键字的数组。
-function textDisplay(){
-  var script = document.createElement('script');
-  script.src = 'http://tip.soku.com/search_tip_1?jsoncallback=hotSearch&query=';
-  document.querySelector('head').appendChild(script);
-}
-
-function jsonp(value){
-  var script = document.createElement('script');
-  script.src = 'http://tip.soku.com/search_tip_1?jsoncallback=hotSearch&query=' + value;
-  document.querySelector('head').appendChild(script);
-}
-/**
- * 处理和渲染优酷下拉提示
- * @param  {Object} response 优酷下拉提示返回值
- * @return {void}
- */
-function hotSearch(response) {
-  const suggestions = response.r.map(function (item) {
-    return item.w;
-  });
-
-    render(suggestions);
-  }
-
 const input = document.getElementById('text');
 const suggestionList = document.getElementById('suggestionList')
+
+input.addEventListener('click', (event) => {
+  console.log('click event.target.value:', event.target.value);
+  const value = event.target.value;
+
+  if (value === '') {
+    // 展示热搜十条
+    showHotSearches();
+  }
+});
+
+input.addEventListener('input', (event) => {
+  console.log('input event.target.value:', event.target.value);
+
+  const value = event.target.value;
+
+  if (value === '') {
+    // 展示热搜十条
+    showHotSearches();
+  } else {
+    // 展示下拉提示
+    showSuggestions(value);
+  }
+});
+
+/**
+ * 显示热搜十条
+ * @return {void}
+ */
+function showHotSearches() {
+  // 若没有缓存 hotSearches，就通过接口取
+  if (!showHotSearches.hotSearches) {
+    youkuJsonp({
+      query: '',
+      callbackFunctionName: 'handleHotSearch',
+    });
+
+    return;
+  }
+
+  // 否则直接显示
+  render(showHotSearches.hotSearches)
+}
+
+//未输入时显示热搜 hotResponseArray:保存了热搜关键字的数组。
+function handleHotSearch(response) {
+  const hotSearches = formatResponse(response);
+
+  render(hotSearches);
+
+  showHotSearches.hotSearches = hotSearches;
+}
+
+/**
+ * 将优酷的下拉提示返回值格式化为字符串数组
+ * @param {Object} response
+ * @return {string[]}
+ */
+function formatResponse(response) {
+  return response.r.map(function (item) {
+    return item.w;
+  });
+}
+
+/**
+ * 优酷下拉提示 JSONP 接口
+ * @param  {Object} options 包含 query 和 callbackFunctionName 的对象
+ * @return {void}
+ */
+function youkuJsonp(options) {
+  const query = options.query;
+  const callbackFunctionName = options.callbackFunctionName;
+
+  // 最后拼接为 http://tip.soku.com/search_tip_1?jsoncallback=x&query=y
+  jsonp('http://tip.soku.com/search_tip_1', {
+    queryKey: 'query',
+    queryValue: query,
+
+    callbackKey: 'jsoncallback',
+    callbackValue: callbackFunctionName,
+  });
+}
+
+/**
+ * 展示下拉提示
+ * @param  {string} query 用户输入的查询词
+ * @return {void}
+ */
+function showSuggestions(query) {
+  youkuJsonp({
+    query: query,
+    callbackFunctionName: 'handleSuggestions',
+  });
+}
+
+function handleSuggestions(response) {
+  render(formatResponse(response));
+}
 
 /**
  * 渲染下拉提示
@@ -32,7 +105,8 @@ const suggestionList = document.getElementById('suggestionList')
  * @return {void}
  */
 function render(suggestions) {
-  cleanSuggestions(suggestionList)
+  cleanSuggestions(suggestionList);
+
   var n = 1;
   for (var i = 0, length = suggestions.length; i < length; i++) {
     var select = (suggestions[i].split(input.value));

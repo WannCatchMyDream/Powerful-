@@ -1,6 +1,14 @@
 const input = document.getElementById('text');
 const suggestionList = document.getElementById('suggestionList')
 
+suggestionList.addEventListener('click',function(ev){
+  var target = ev.target;
+  console.log('target:', target);
+  if(target.nodeName === 'A'){
+    input.value = target.innerText;
+  }
+});
+
 input.addEventListener('click', (event) => {
   console.log('click event.target.value:', event.target.value);
   const value = event.target.value;
@@ -153,14 +161,6 @@ function render(suggestions) {
       n = n + 1;
   }
 }
-
-suggestionList.addEventListener('click',function(ev){
-  var target = ev.target;
-  console.log('target:', target);
-  if(target.nodeName === 'A'){
-    input.value = target.innerText;
-  }
-});
 
 function skip(){
   var urL = 'http://so.youku.com/search_video/q_' + input.value + '?';

@@ -1,10 +1,17 @@
 const n = 1;
 
 //未输入时显示热搜 hotResponseArray:保存了热搜关键字的数组。
-function textDisplay(){
+/*function textDisplay(){
   var script = document.createElement('script');
   script.src = 'http://tip.soku.com/search_tip_1?jsoncallback=hotSearch&query=';
   document.querySelector('head').appendChild(script);
+} */
+
+// 输入关键字搜索
+function jsonp(value){
+  var script = document.createElement("script");
+  script.src = 'http://tip.soku.com/search_tip_1?jsoncallback=hotSearch&query=' + value;
+  document.querySelector("head").appendChild(script);
 }
 
 /**
@@ -32,7 +39,7 @@ function render(suggestions) {
   for (var i = 0, length = suggestions.length; i < length; i++) {
     const select = (responseArray[i].split(textValue));
 
-    if((select[0] == '' || select[1] = '') && select.length >= 2) {
+    if((select[0] == '' || select[1] == '') && select.length >= 2) {
       var displayTag = document.createElement("li");
       var highLight = document.createElement("b");
       var numDisplay = document.createELement("span");
@@ -44,7 +51,7 @@ function render(suggestions) {
       forClick.onclick = function(){ input.value = displayValue[0];};
 
       var number = document.createTextNode(n);
-      var textValue =input.value;
+      var textValue = input.value;
       var textNodeValue = document.createTextNode(textValue);
 
       // 这行诡异的代码只有你看得懂
@@ -64,9 +71,4 @@ function render(suggestions) {
   }
 }
 
-//未输入时显示热搜 hotResponseArray:保存了热搜关键字的数组。
-function (ulID,Array){
-  var listDisplay = document.getElementById(ulID);
-  for(var h = 0; h < hotResponse.length; h++){
-  }
-}
+

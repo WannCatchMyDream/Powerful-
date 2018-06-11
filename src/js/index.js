@@ -6,7 +6,7 @@ function jsonp(textValue) {
 
 // 无需每次获取，可用变量缓存之
 // 而且放在 for 循环得多次获取，性能太低
-const suggestionList = document.getElementById("forDisplay");
+const suggestionList = document.getElementById("suggestionList");
 
 function handleResponse(response) {
   // 渲染之前先清空老的数据
@@ -87,7 +87,7 @@ function skip(){
 function hotSearch(hotResponse){
   clearSuggestions(suggestionList);
 
-  var listDisplay = document.getElementById("forDisplay");
+  var listDisplay = document.getElementById("suggestionList");
   for(var h = 0; h < hotResponse.r.length ; h++){
 
     // var s[h = hotResponse.r[h].w;  报错类型：Uncaught SyntaxError: Unexpected token [
@@ -115,4 +115,21 @@ function hotSearch(hotResponse){
   }
 }
 
-// 还有一个bug解决不了
+
+
+
+
+      var displayTag = document.createElement("li");
+      var highLight = document.createElement("b");
+      var numDisplay = document.createElement("span");
+      var forClick = document.createElement("a");
+
+      forClick.href='javascript:void(0)';
+
+      // 事件委托了解下
+      forClick.onclick = function(){ input.value = displayValue[0];};
+
+      var number = document.createTextNode(n);
+      var textValue = input.value;
+      var textNodeValue = document.createTextNode(textValue);
+

@@ -48,6 +48,11 @@ function render(suggestions) {
     var number = document.createTextNode(n);
     var textValue = input.value;
     var textNodeValue = document.createTextNode(textValue);
+
+    if (n < 4) {
+      numDisplay.classList.add('top3');
+    }
+
     displayTag.appendChild(forClick).appendChild(numDisplay).appendChild(number)
 
     if((select[0] == '' || select[1] == '') && select.length >= 2) {
@@ -70,10 +75,6 @@ function render(suggestions) {
       displayTag.appendChild(forClick).appendChild(selectNode);
     }
 
-    if (n < 4) {
-      numDisplay.style = "color:red;"
-    }
-
       suggestionList.appendChild(displayTag);
       n = n + 1;
   }
@@ -88,4 +89,3 @@ function skip(){
 function cleanSuggestions(suggestionList){
   emptyNode(suggestionList);
 }
-

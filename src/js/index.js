@@ -118,13 +118,6 @@ function render(suggestions) {
 
     // 事件委托了解下
     // forClick.onclick = function(){ input.value = displayValue[0];};
-    suggestionList.addEventListener('click',function(ev){
-      var target = ev.target;
-      console.log('target:', target);
-      if(target.nodeName === 'A'){
-        input.value = target.innerText;
-      }
-    });
 
     var number = document.createTextNode(n);
     var textValue = input.value;
@@ -160,6 +153,14 @@ function render(suggestions) {
       n = n + 1;
   }
 }
+
+suggestionList.addEventListener('click',function(ev){
+  var target = ev.target;
+  console.log('target:', target);
+  if(target.nodeName === 'A'){
+    input.value = target.innerText;
+  }
+});
 
 function skip(){
   var urL = 'http://so.youku.com/search_video/q_' + input.value + '?';

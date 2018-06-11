@@ -1,135 +1,91 @@
-function jsonp(textValue) {
+//未输入时显示热搜 hotResponseArray:保存了热搜关键字的数组。
+function textDisplay(){
   var script = document.createElement('script');
-  script.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=' + textValue + '&cb=handleResponse';
+  script.src = 'http://tip.soku.com/search_tip_1?jsoncallback=hotSearch&query=';
   document.querySelector('head').appendChild(script);
 }
 
-// 无需每次获取，可用变量缓存之
-// 而且放在 for 循环得多次获取，性能太低
-const suggestionList = document.getElementById("suggestionList");
-
-function handleResponse(response) {
-  // 渲染之前先清空老的数据
-  // 为什么把清空操作写成函数吗？虽然才一行代码
-  // 好处是：
-  // 1. 可读性更强。写成 node.textContent = ''; 别人一眼看不上什么意思。写成 emptyNode(suggestionList); 就知道原来是清空节点呀
-  // 2. 易于重构。清空节点有四种写法，假如某天你发现别的方法效率更高你可以只修改该函数，使用到该函数的地方无需一一改动
-  // 3. 便于测试。单测的最小单元是函数
-  clearSuggestions(suggestionList);
-  var l = 1;
-  for (i = 0; i < response.s.length; i++) {
-    // 创建 li 标签
-    var node = document.createElement("li");
-    // 创建a标签
-    var anode = document.createElement("a");
-    anode.style = "text-decoration:none;color:black";
-    anode.href = "javascript:void(0)";
-    anode.onclick = function(){setText();};
-    var tvalue = document.getElementById("text").value;
-    const sp =(response.s[i]).split(tvalue);
-    //创建<b>及样式
-    const bt = document.createElement("b");
-    bt.style.color = "purple";
-    node.appendChild(bt);
-    // 创建<span>标签及样式
-    const redNum = document.createElement("span");
-    redNum.style="color:red";
-    if((sp[0] == ""||sp[1] =="") && sp.length >= 2){
-
-      // 实现关键字的高亮
-      var nodevalue =tvalue;
-      var text = document.createTextNode(nodevalue);
-      var text1 = document.createTextNode(sp[1]);
-      var text2 = document.createTextNode(l + " ");
-
-      if(l < 4){
-        node.appendChild(anode).appendChild(redNum).append(text2);
-      }else{
-      node.appendChild(anode).appendChild(text2);
-      }
-      node.appendChild(anode).appendChild(bt).appendChild(text);
-      node.appendChild(anode).appendChild(text1);
-      suggestionList.appendChild(node);
-      l = l + 1;
-      }
-
-    // 实现输入框内容替换
-    // 以空间换时间（）
-    function setText(){
-      document.getElementById("text").value = tvalue + sp[1];
-    }
-  }
+function jsonp(value){
+  var script = document.createElement('script');
+  script.src = 'http://tip.soku.com/search_tip_1?jsoncallback=hotSearch&query=' + value;
+  document.querySelector('head').appendChild(script);
 }
 /**
- * 清空下拉提示
- * @private
- * @param  {HTMLElement} node 待清空的下拉提示节点
+ * 处理和渲染优酷下拉提示
+ * @param  {Object} response 优酷下拉提示返回值
  * @return {void}
  */
-function clearSuggestions(suggestionList) {
-  emptyNode(suggestionList);
+function hotSearch(response) {
+  const suggestions = response.r.map(function (item) {
+    return item.w;
+  });
+
+    render(suggestions);
+  }
+
+const input = document.getElementById('text');
+const suggestionList = document.getElementById('suggestionList')
+
+/**
+ * 渲染下拉提示
+ * @param  {string[]} suggestions 下拉提示列表
+ * @return {void}
+ */
+function render(suggestions) {
+  cleanSuggestions(suggestionList)
+  var n = 1;
+  for (var i = 0, length = suggestions.length; i < length; i++) {
+    var select = (suggestions[i].split(input.value));
+    console.log(select);
+    var displayTag = document.createElement("li");
+    var numDisplay = document.createElement("span");
+    var forClick = document.createElement("a");
+    forClick.href='javascript:void(0)';
+
+    // 事件委托了解下
+    forClick.onclick = function(){ input.value = displayValue[0];};
+
+    var number = document.createTextNode(n);
+    var textValue = input.value;
+    var textNodeValue = document.createTextNode(textValue);
+    displayTag.appendChild(forClick).appendChild(numDisplay).appendChild(number)
+
+    if((select[0] == '' || select[1] == '') && select.length >= 2) {
+      var selectNode = document.createTextNode(select[0] + select[1]);
+      var highLight = document.createElement("b");
+      if(select[0] == ''){
+        displayTag.appendChild(forClick).appendChild(highLight).appendChild(textNodeValue);
+        displayTag.appendChild(forClick).appendChild(selectNode);
+      }else{
+        displayTag.appendChild(forClick).appendChild(selectNode);
+        displayTag.appendChild(forClick).appendChild(highLight).appendChild(textNodeValue);
+      }
+
+      // 这行诡异的代码只有你看得懂
+      var displayValue = suggestions[i].split("。");
+    }
+
+    if(select[0] != '' && select[1] != ''){
+      selectNode = document.createTextNode(suggestions[i]);
+      displayTag.appendChild(forClick).appendChild(selectNode);
+    }
+
+    if (n < 4) {
+      numDisplay.style = "color:red;"
+    }
+
+      suggestionList.appendChild(displayTag);
+      n = n + 1;
+  }
 }
 
 function skip(){
-  var textvalue = document.getElementById("text").value;
-  var urL = 'https://www.so.com/s?ie=utf-8&src=dlm&shb=1&hsid=c93169bd520917ab&ls=n728b639592&q=' + textvalue;
+  var urL = 'http://so.youku.com/search_video/q_' + input.value + '?';
   console.log(urL);
   window.location.assign(urL);
 }
 
-//测试名字有点随意了。词汇量
- function textDisplay(){
-  var script = document.createElement('script');
-  script.src = 'http://tip.soku.com/search_tip_1?jsoncallback=hotSearch&query=';
-  document.querySelector('head').appendChild(script);
-  }
-
-function hotSearch(hotResponse){
-  clearSuggestions(suggestionList);
-
-  var listDisplay = document.getElementById("suggestionList");
-  for(var h = 0; h < hotResponse.r.length ; h++){
-
-    // var s[h = hotResponse.r[h].w;  报错类型：Uncaught SyntaxError: Unexpected token [
-    var redSpan = document.createElement("span");
-    if(h + 1 < 4){
-      redSpan.style = "color:red";
-    }
-    var Anode = document.createElement("a");
-    Anode.href="javascript:void(0)";
-    Anode.style="text-decoration: none;color:black";
-    Anode.onclick = function(){document.getElementById("text").value = displayValue[0];};
-    var liDisplay = document.createElement("li");
-    var tnode = document.createTextNode(h + 1 + ' ');
-    var tNode = document.createTextNode(hotResponse.r[h].w);
-    const displayValue = (hotResponse.r[h].w).split("。");
-    const numBefore = liDisplay.appendChild(Anode).appendChild(tNode);
-    liDisplay.appendChild(Anode).appendChild(redSpan).appendChild(tnode);
-    liDisplay.appendChild(Anode).appendChild(numBefore);
-    listDisplay.appendChild(liDisplay);
-
-  }
-
-  function clearSuggestions(){
-    emptyNode(suggestionList);
-  }
+function cleanSuggestions(suggestionList){
+  emptyNode(suggestionList);
 }
-
-
-
-
-
-      var displayTag = document.createElement("li");
-      var highLight = document.createElement("b");
-      var numDisplay = document.createElement("span");
-      var forClick = document.createElement("a");
-
-      forClick.href='javascript:void(0)';
-
-      // 事件委托了解下
-      forClick.onclick = function(){ input.value = displayValue[0];};
-
-      var number = document.createTextNode(n);
-      var textValue = input.value;
-      var textNodeValue = document.createTextNode(textValue);
 

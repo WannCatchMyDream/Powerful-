@@ -7,11 +7,8 @@ suggestionList.addEventListener('click',function(event){
   console.log('target:', target);
   if (target.nodeName === 'A' ){
     input.value = target.textContent;
-  }else{
-    for (var m = 0; m < aTag.length; m++)
-    if (target.textContent === aTag[m].innerText && target.nodeName ==='B'){
-      input.value = target.textContent;
-    }
+  }else if (target.nodeName === 'B'){
+    input.value =target.parentNode.textContent;
   }
 });
 

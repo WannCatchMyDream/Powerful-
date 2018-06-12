@@ -1,11 +1,43 @@
-#forDisplay{
+#suggestionList {
+  display: block;
   list-style: none;
+  width:230px;
+  background-color: rgb(255,251,240);
 }
 
-#span{
+ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+#span {
   color:red;
 }
 
 .top3 {
   color: #f60;
 }
+
+#searchBlocker {
+  position:fixed;
+  left:40%;
+  top:20%;
+}
+
+#text {
+  width:249px;
+  height:30px;
+  border-radius: 50px;
+}
+
+#searchButton {
+  color: #19c3ff;
+  border-radius: 10px;
+  width: 50px;
+  height: 30px
+}
+
+
+
+(target.nodeName === 'B' && (for (var m = 0; m < aTag.length; m++) if (target.textContent === aTag[m].innerText)){
+    input.value = target.textContent;

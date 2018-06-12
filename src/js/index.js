@@ -1,12 +1,17 @@
 const input = document.getElementById('text');
 const suggestionList = document.getElementById('suggestionList')
 
-suggestionList.addEventListener('click',function(ev){
-  var target = ev.target;
+suggestionList.addEventListener('click',function(event){
+  var target = event.target;
+  var aTag = document.getElementsByTagName("a");
   console.log('target:', target);
-  if(target.nodeName === 'A'){
-    var textDisplayValue = (target.innerText).match(/[\u4e00-\u9fa5]+/)
-    input.value = textDisplayValue;
+  if (target.nodeName === 'A' ){
+    input.value = target.textContent;
+  }else{
+    for (var m = 0; m < aTag.length; m++)
+    if (target.textContent === aTag[m].innerText && target.nodeName ==='B'){
+      input.value = target.textContent;
+    }
   }
 });
 
@@ -114,6 +119,7 @@ function handleSuggestions(response) {
  * @return {void}
  */
 function render(suggestions) {
+
   cleanSuggestions(suggestionList);
 
   var n = 1;
@@ -136,8 +142,8 @@ function render(suggestions) {
       numDisplay.classList.add('top3');
     }
 
-    displayTag.appendChild(forClick).appendChild(numDisplay).appendChild(number)
-
+    displayTag.appendChild(numDisplay).appendChild(number);
+    displayTag.appendChild(forClick);
     if((select[0] == '' || select[1] == '') && select.length >= 2) {
       var selectNode = document.createTextNode(select[0] + select[1]);
       var highLight = document.createElement("b");
@@ -148,15 +154,12 @@ function render(suggestions) {
         displayTag.appendChild(forClick).appendChild(selectNode);
         displayTag.appendChild(forClick).appendChild(highLight).appendChild(textNodeValue);
       }
-
-      // 这行诡异的代码只有你看得懂
-      // var displayValue = suggestions[i].split("。");
     }
 
     if(select[0] != '' && select[1] != ''){
       selectNode = document.createTextNode(suggestions[i]);
       displayTag.appendChild(forClick).appendChild(selectNode);
-    }
+    }else{}
 
       suggestionList.appendChild(displayTag);
       n = n + 1;

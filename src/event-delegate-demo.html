@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>事件委托</title>
+</head>
+<body>
+  <ul id="box">
+    <li>
+      <span>1</span><a href="javascript:;"><em>北京</em>女子图鉴</a>
+    </li>
+
+    <li>
+      <span>2</span><a href="javascript:;">上海女子图鉴</a>
+    </li>
+  </ul>
+
+  <script>
+    document.getElementById('box').addEventListener('click', ({ target }) => {
+      console.log('target.tagName:', target.tagName);
+
+      if (target.tagName === 'A') {
+        console.log('Set input value to target.textContent', target.textContent);
+      } else {
+        if (target.tagName === 'EM') {
+          console.log('Set input value to target.parentNode.textContent:', target.parentNode.textContent);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

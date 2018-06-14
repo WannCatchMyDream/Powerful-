@@ -2,14 +2,15 @@ const input = document.getElementById('text');
 const suggestionList = document.getElementById('suggestionList')
 
 suggestionList.addEventListener('click',function(event){
-  var target = event.target;
-  var aTag = document.getElementsByTagName("a");
-  console.log('target:', target);
-  if (target.nodeName === 'A' ){
+  var target = event.currentTarget;
+  console.log(target)
+  /* var aTag = document.getElementsByTagName("a");
+   console.log('target:', target);
+   if (target.nodeName === 'A' ){
     input.value = target.textContent;
   }else if (target.nodeName === 'B'){
     input.value =target.parentNode.textContent;
-  }
+  } */
 });
 
 input.addEventListener('click', (event) => {

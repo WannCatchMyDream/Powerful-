@@ -1,0 +1,45 @@
+#searchPage {
+  width: 100%;
+  height:100%;
+  font-size: 20px;
+}
+
+#mainNav {
+  margin: 30px auto;
+  height: 30px;
+  width: 600px;
+}
+
+#nav {
+  list-style: none;
+  word-spacing: 10px;
+}
+
+#nav li {
+  display: inline-block;
+  background-color: pink;
+  letter-spacing: 5px;
+}
+
+#searchNav {
+  margin: 0 auto;
+  width: 550px;
+  height: 30px;
+}
+
+#text {
+  width:450px;
+  height:30px;
+}
+
+#searchButton {
+  width: 80px;
+  height: 38px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+

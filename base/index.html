@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>切换搜索页面</title>
+  <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+  <div id="searchPage">
+    <div id="mainNav">
+      <ul id="nav">
+        <li><a href="javascript:void(0)">网页</a></li>
+        <li><a href="javascript:void(0)">音乐</a></li>
+        <li><a href="javascript:void(0)">图片</a></li>
+        <li><a href="javascript:void(0)">优酷</a></li>
+        <li><a href="javascript:void(0)">翻译</a></li>
+        <li><a href="javascript:void(0)">新闻</a></li>
+        <li><a href="javascript:void(0)">背景</a></li>
+        <!-- 通过显示 来切换搜索方式 -->
+        <li id="li"><a href="javascript:void(0)" onclick="changeSearchType()">显示</a></li>
+      </ul>
+    </div>
+    <div id="searchNav">
+        <input type="text" id="text" />
+        <input type="button"  id="searchButton"  value="搜索" />
+        <ul id="suggestionList"></ul>
+    </div>
+  </div>
+  <script src = "./lib/node.js"></script>
+  <script src = "./lib/jsonp.js"></script>
+  <script src = "./js/index.js"></script>
+</body>
+</html>

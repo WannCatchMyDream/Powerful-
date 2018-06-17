@@ -1,6 +1,7 @@
 const input = document.getElementById('text');
 const suggestionList = document.getElementById('suggestionList');
 const nav = document.getElementById('li');
+const buttonValue = document.getElementById('searchButton');
 
 suggestionList.addEventListener('click',function(event){
   var target = event.target;
@@ -9,16 +10,6 @@ suggestionList.addEventListener('click',function(event){
     input.value = target.textContent;
   }else if (target.nodeName === 'B'){
     input.value =target.parentNode.textContent;
-  }
-});
-
-input.addEventListener('click', (event) => {
-  console.log('click event.target.value:', event.target.value);
-  const value = event.target.value;
-
-  if (value === '') {
-    // 展示热搜十条
-    showHotSearches();
   }
 });
 
@@ -43,7 +34,7 @@ input.addEventListener('input', (event) => {
 function showHotSearches() {
   // 若没有缓存 hotSearches，就通过接口取
   if (!showHotSearches.hotSearches) {
-    youkuJsonp({
+    vedioJsonp({
       query: '',
       callbackFunctionName: 'handleHotSearch',
     });
@@ -80,18 +71,28 @@ function formatResponse(response) {
  * @param  {Object} options 包含 query 和 callbackFunctionName 的对象
  * @return {void}
  */
-function youkuJsonp(options) {
+function vedioJsonp(options) {
   const query = options.query;
   const callbackFunctionName = options.callbackFunctionName;
-
+  if(buttonValue.value == "优酷视频"){
   // 最后拼接为 http://tip.soku.com/search_tip_1?jsoncallback=x&query=y
-  jsonp('http://tip.soku.com/search_tip_1', {
-    queryKey: 'query',
-    queryValue: query,
+    jsonp('http://tip.soku.com/search_tip_1', {
+      queryKey: 'query',
+      queryValue: query,
 
-    callbackKey: 'jsoncallback',
-    callbackValue: callbackFunctionName,
-  });
+      callbackKey: 'jsoncallback',
+      callbackValue: callbackFunctionName,
+    });
+
+  }else if(buttonValue.value == "腾讯视频"){
+    jsonp('腾讯热搜接口找不到', {
+      queryKey: 'query',
+      queryValue: query,
+
+      callbackKey: 'jsoncallback',
+      callbackValue: callbackFunctionName,
+    });
+  }
 }
 
 /**
@@ -100,7 +101,7 @@ function youkuJsonp(options) {
  * @return {void}
  */
 function showSuggestions(query) {
-  youkuJsonp({
+  vedioJsonp({
     query: query,
     callbackFunctionName: 'handleSuggestions',
   });
@@ -169,13 +170,15 @@ function changeSearchType(){
   var li1 = document.createElement("li");
   li1.id="li1"
   var li2 = document.createElement("li");
-  li2.id="l2"
-  var aClick = document.createElement("a");
-  aClick.href='javascript:void(0)';
+  li2.id="li2"
+  var aClickFirst = document.createElement("a");
+  aClickFirst.href='javascript:void(0)';
+  var aClickSecond = document.createElement("a");
+  aClickSecond.href='javascript:void(0)';
   var tencent = document.createTextNode("腾讯视频");
   var youku = document.createTextNode("优酷视频");
-  searchList.appendChild(li1).appendChild(aClick).appendChild(tencent);
-  searchList.appendChild(li2).appendChild(aClick).appendChild(youku);
+  searchList.appendChild(li1).appendChild(aClickFirst).appendChild(tencent);
+  searchList.appendChild(li2).appendChild(aClickSecond).appendChild(youku);
   nav.appendChild(searchList);
   nav.addEventListener('click',(event) => {
     target = event.target;
@@ -185,20 +188,38 @@ function changeSearchType(){
 
 // 主要模块
 function searchButton(tips){
-  if(tips != "显示"){
-    var buttonValue = document.getElementById('searchButton');
-    buttonValue.value = target.innerText;
-    console.log(buttonValue.value);
-  }
-  if(buttonValue.value="腾讯视频"){
-    var url = 'https://v.qq.com/x/search/?q=' + input.value;
-    window.location.assign(url);
-    // 执行代码
-  }else{
-    // 执行代码
-    var urL = 'http://so.youku.com/search_video/q_' + input.value + '?';
-    console.log(urL);
-    window.location.assign(urL);
+  buttonValue.value = tips;
+  if(buttonValue.value == '显示'){
+    buttonValue.value = '搜索';
+  }else if(buttonValue.value != '显示'){
+    if(buttonValue.value == '腾讯视频'){
+      input.addEventListener('click', (event) => {
+      console.log('click event.target.value:', event.target.value);
+      const value = event.target.value;
+
+      if (value === '') {
+      // 展示热搜十条
+      showHotSearches();
+      }
+    });
+
+    /*  var url = 'https://v.qq.com/x/search/?q=' + input.value;
+      window.location.assign(url); */
+      // 执行代码
+    }else if(buttonValue.value == '优酷视频'){
+      input.addEventListener('click', (event) => {
+      console.log('click event.target.value:', event.target.value);
+      const value = event.target.value;
+
+      if (value === '') {
+      // 展示热搜十条
+      showHotSearches();
+      }
+    });
+    buttonValue.addEventListener('click',() =>{var url = 'http://so.youku.com/search_video/q_' + input.value;
+      console.log(url);
+      window.location.assign(url);})
+    }
   }
 }
 

@@ -61,9 +61,10 @@ function handleHotSearch(response) {
  * @return {string[]}
  */
 function formatResponse(response) {
-  return response.r.map(function (item) {
-    return item.w;
-  });
+  return (response.r.map(function (item) {
+    return item.w;})|| response.words.map(function (item) {
+    return item.c_title;})
+  )
 }
 
 /**
@@ -85,7 +86,7 @@ function vedioJsonp(options) {
     });
 
   }else if(buttonValue.value == "腾讯视频"){
-    jsonp('腾讯热搜接口找不到', {
+    jsonp('https://data.video.qq.com/fcgi-bin/dataout', {
       queryKey: 'query',
       queryValue: query,
 
@@ -158,7 +159,6 @@ function render(suggestions) {
       selectNode = document.createTextNode(suggestions[i]);
       displayTag.appendChild(forClick).appendChild(selectNode);
     }else{}
-
       suggestionList.appendChild(displayTag);
       n = n + 1;
   }
@@ -192,31 +192,30 @@ function searchButton(tips){
   if(buttonValue.value == '显示'){
     buttonValue.value = '搜索';
   }else if(buttonValue.value != '显示'){
+
     if(buttonValue.value == '腾讯视频'){
       input.addEventListener('click', (event) => {
       console.log('click event.target.value:', event.target.value);
       const value = event.target.value;
 
       if (value === '') {
-      // 展示热搜十条
+      // 展示腾讯视频热搜九条
       showHotSearches();
       }
     });
-
-    /*  var url = 'https://v.qq.com/x/search/?q=' + input.value;
-      window.location.assign(url); */
-      // 执行代码
+      buttonValue.addEventListener('click',() => {var url = 'https://v.qq.com/x/search/?q=' + input.value;
+      window.location.assign(url);})
     }else if(buttonValue.value == '优酷视频'){
       input.addEventListener('click', (event) => {
       console.log('click event.target.value:', event.target.value);
       const value = event.target.value;
 
       if (value === '') {
-      // 展示热搜十条
+      // 展示优酷视频热搜十条
       showHotSearches();
       }
     });
-    buttonValue.addEventListener('click',() =>{var url = 'http://so.youku.com/search_video/q_' + input.value;
+      buttonValue.addEventListener('click',() => {var url = 'http://so.youku.com/search_video/q_' + input.value;
       console.log(url);
       window.location.assign(url);})
     }
@@ -226,14 +225,3 @@ function searchButton(tips){
 function cleanSuggestions(suggestionList){
   emptyNode(suggestionList);
 }
-
-// 未完成
-/*
-tencentJsonp('url', {
-    queryKey: 'query',
-    queryValue: query,
-
-    callbackKey: 'jsoncallback',
-    callbackValue: callbackFunctionName,
-  });
-  */

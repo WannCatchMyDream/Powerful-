@@ -13,9 +13,13 @@ function jsonp(url, options) {
 
   const callbackKey = options.callbackKey;
   const callbackValue = options.callbackValue;
-
-  const script = document.createElement('script');
-  script.src = url + '?' + callbackKey + '=' + callbackValue + '&' + queryKey + '=' + queryValue;
+ if (buttonValue.value == '优酷视频'){
+    var script = document.createElement('script');
+    script.src = url + '?' + callbackKey + '=' + callbackValue + '&' + queryKey + '=' + queryValue;
+  }else if (buttonValue.value == '腾讯视频'){
+    var script = document.createElement('script');
+    script.src = url + '?' + callbackKey + '=' + callbackValue + '&' + '&auto_id=938&otype=json';
+  }
 
   document.querySelector('head').appendChild(script);
 }

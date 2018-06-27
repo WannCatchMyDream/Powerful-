@@ -164,28 +164,6 @@ function render(suggestions) {
   }
 }
 
-function changeSearchType(){
-  var searchList = document.createElement("ul");
-  searchList.style="display:inline"
-  var li1 = document.createElement("li");
-  li1.id="li1"
-  var li2 = document.createElement("li");
-  li2.id="li2"
-  var aClickFirst = document.createElement("a");
-  aClickFirst.href='javascript:void(0)';
-  var aClickSecond = document.createElement("a");
-  aClickSecond.href='javascript:void(0)';
-  var tencent = document.createTextNode("腾讯视频");
-  var youku = document.createTextNode("优酷视频");
-  searchList.appendChild(li1).appendChild(aClickFirst).appendChild(tencent);
-  searchList.appendChild(li2).appendChild(aClickSecond).appendChild(youku);
-  nav.appendChild(searchList);
-  nav.addEventListener('click',(event) => {
-    target = event.target;
-    searchButton(target.innerText);
-  })
-}
-
 // 主要模块
 function searchButton(tips){
   buttonValue.value = tips;

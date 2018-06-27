@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>三大区域</title>
+  <script src="./js/index.js"></script>
+  <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+  <div class="box">
+    <ul class="nav">
+      <li class="navI">
+        <input class="navI-radio" name="nav" type="radio" id="firstNav" checked>
+        <label id="navI-title1" for="firstNav">网址大全</label>
+        <p class="navI-txt">网址内容</p>
+      </li>
+      <li class="navI">
+        <input class="navI-radio" name="nav" type="radio" id="secondNav">
+        <label id="navI-title2" for="secondNav" onclick="vidioDisplay()">视频更新</label>
+        <p class="navI-txt ml1">视频资</p>
+      </li>
+      <li class="navI">
+        <input class="navI-radio" name="nav" type="radio" id="thirdNav">
+        <label id="navI-title3" for="thirdNav" onclick="newsDisplay()">新闻头条</label>
+        <p class="navI-txt ml2">新闻</p>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

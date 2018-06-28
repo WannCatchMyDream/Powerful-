@@ -34,6 +34,26 @@
         </select>
         <ul id="suggestionList"></ul>
     </div>
+    <div class="box">
+      <ul class="nav">
+        <li class="navI">
+          <input class="navI-radio" name="nav" type="radio" id="firstNav" checked>
+          <label id="navI-title1" for="firstNav">网址大全</label>
+          <p class="navI-txt">网址内容（这里可以写死吧）</p>
+        </li>
+        <li class="navI">
+          <input class="navI-radio" name="nav" type="radio" id="secondNav">
+          <label id="navI-title2" for="secondNav" onclick="vidioDisplay()">视频更新</label>
+          <p class="navI-txt ml1">视频资</p>
+          <ul id="vedioDisplay"></ul>
+        </li>
+        <li class="navI">
+          <input class="navI-radio" name="nav" type="radio" id="thirdNav">
+          <label id="navI-title3" for="thirdNav" onclick="newsDisplay()">新闻头条</label>
+          <p class="navI-txt ml2">新闻</p>
+        </li>
+      </ul>
+    </div>
   </div>
   <script src = "./lib/node.js"></script>
   <script src = "./lib/jsonp.js"></script>

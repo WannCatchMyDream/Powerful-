@@ -2,6 +2,9 @@ const input = document.getElementById('text');
 const suggestionList = document.getElementById('suggestionList');
 const nav = document.getElementById('li');
 const buttonValue = document.getElementById('searchButton');
+const firstNav = document.getElementById('navI-title1');
+const secondNav = document.getElementById('navI-title2');
+const thirdNav = document.getElementById('navI-title3');
 
 suggestionList.addEventListener('click',function(event){
   var target = event.target;
@@ -202,4 +205,49 @@ function searchButton(tips){
 
 function cleanSuggestions(suggestionList){
   emptyNode(suggestionList);
+}
+
+// 三大展示模块
+function vidioDisplay(){
+  var script = document.createElement('script');
+  script.src = 'http://open.onebox.so.com/dataApi?&tpl=2&callback=get360RankedVideos&_1528902170281&query=%E7%BB%BC%E8%89%BA&url=%E7%BB%BC%E8%89%BA%E6%8E%92%E8%A1%8C&type=relation_variety_rank&src=onebox&num=1&addInfo=types:%E5%85%A8%E9%83%A8|region:%E5%85%A8%E9%83%A8|year:%E5%85%A8%E9%83%A8|limit:10|page:1';
+  document.querySelector("head").appendChild(script);
+
+  //增加清空节点函数
+}
+
+function get360RankedVideos(response){
+  return response.display.hot.map(function(item){
+    console.log(item.imgurl);
+    return item.imgurl;
+    var li = document.createElement('li');
+    var img = document.createElement('img');
+    img.src = item.imgurl;
+    console.log(img);
+    document.getElementById("vedioDisplay").appendChild(li).appendChild(img);
+  })
+}
+
+function newsDisplay(){
+  var script = document.createElement('script');
+  script.src = 'https://pc.api.btime.com/btimeweb/getInfoFlow?callback=newsHandle&channel=news&request_pos=channel&citycode=local_330500_330000&sub_channel=&refresh=6&req_count=6&refresh_type=2&pid=3&from=&page_refresh_id=bdd83c10-6f19-11e8-8796-6c92bf0a9cdb&_=1528901698882'
+  document.querySelector('head').appendChild(script);
+  console.log(script);
+
+  // 增加清空节点函数
+}
+
+function newsHandle(response){
+  console.log(response);
+  return response.data.map(function(item){
+    var title = item.data.title;
+    var url = item.open_url;
+    var cover = item.data.covers;
+    if(title && url && cover){
+      console.log(title);
+      console.log(url);
+      console.log(cover[0]);
+    }
+  })
+  console.log(response);
 }

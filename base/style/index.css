@@ -86,13 +86,27 @@ input{
   border-bottom: 1px solid #cecece;
 }
 
-.navI-txt {
+#head {
+  text-align: center;
+}
+
+#navI-txt1 {
   position:relative;
   width: 675px;
-  height:400px;
+  height:100px;
   text-indent:2em;
   line-height: 2;
   background:#fff;
+}
+
+#navI-txt2 {
+  position:relative;
+  width: 675px;
+  height:100px;
+  text-indent:2em;
+  line-height: 2;
+  background:#fff;
+  display:inline;
 }
 
 .ml1 {
@@ -112,3 +126,6 @@ input{
   z-index:1;
 }
 
+#vedio {
+  display: inline;
+}

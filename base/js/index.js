@@ -5,6 +5,10 @@ const buttonValue = document.getElementById('searchButton');
 const firstNav = document.getElementById('navI-title1');
 const secondNav = document.getElementById('navI-title2');
 const thirdNav = document.getElementById('navI-title3');
+const newDisplay = document.getElementById('newDisplay');
+const videoDisplay = document.getElementById('videoDisplay');
+const txt1 = document.getElementById('navI-txt1');
+const txt2 = document.getElementById('navI-txt2');
 
 suggestionList.addEventListener('click',function(event){
   var target = event.target;
@@ -208,7 +212,12 @@ function cleanSuggestions(suggestionList){
 }
 
 // 三大展示模块
-function vidioDisplay(){
+function webPage(){
+  cleanSuggestions(videoDisplay);
+  cleanSuggestions(newDisplay);
+}
+
+function videosDisplay(){
   var script = document.createElement('script');
   script.src = 'http://open.onebox.so.com/dataApi?&tpl=2&callback=get360RankedVideos&_1528902170281&query=%E7%BB%BC%E8%89%BA&url=%E7%BB%BC%E8%89%BA%E6%8E%92%E8%A1%8C&type=relation_variety_rank&src=onebox&num=1&addInfo=types:%E5%85%A8%E9%83%A8|region:%E5%85%A8%E9%83%A8|year:%E5%85%A8%E9%83%A8|limit:10|page:1';
   document.querySelector("head").appendChild(script);
@@ -217,14 +226,21 @@ function vidioDisplay(){
 }
 
 function get360RankedVideos(response){
+  cleanSuggestions(newDisplay);
+  cleanSuggestions(txt1);
+  cleanSuggestions(txt2);
   return response.display.hot.map(function(item){
     console.log(item.imgurl);
-    return item.imgurl;
     var li = document.createElement('li');
     var img = document.createElement('img');
+    var a = document.createElement('a')
+    a.href = item.url;
+    var movieName = document.createTextNode(item.moviename);
     img.src = item.imgurl;
     console.log(img);
-    document.getElementById("vedioDisplay").appendChild(li).appendChild(img);
+    videoDisplay.appendChild(li).appendChild(img);
+    videoDisplay.appendChild(li).appendChild(a).appendChild(movieName);
+    return (item.imgurl,item.moviename,item.url);
   })
 }
 
@@ -238,12 +254,22 @@ function newsDisplay(){
 }
 
 function newsHandle(response){
+  cleanSuggestions(videoDisplay);
+  cleanSuggestions(txt1);
+  cleanSuggestions(txt2);
   console.log(response);
   return response.data.map(function(item){
-    var title = item.data.title;
+    var title = document.createTextNode(item.data.title);
     var url = item.open_url;
     var cover = item.data.covers;
+    var li = document.createElement('li');
+    var img = document.createElement('img');
+    var a = document.createElement('a');
     if(title && url && cover){
+      img.src = item.data.covers ;
+      a.href = url;
+      newDisplay.appendChild(li).appendChild(img);
+      newDisplay.appendChild(li).appendChild(a).appendChild(title);
       console.log(title);
       console.log(url);
       console.log(cover[0]);

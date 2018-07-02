@@ -37,41 +37,42 @@
     <div class="box">
       <ul class="nav">
         <li class="navI">
-          <input class="navI-radio" name="nav" type="radio" id="firstNav" checked>
-          <label id="navI-title1" for="firstNav" onclick="webPage()">网址大全</label>
-          <ul class="navI-txt">
-          <h2 id="head">酷站大全</h2>
-          <ul id="navI-txt1">
-            <h3>名站</h3>
-            <li>百度</li>
-            <li>Google·微博</li>
-            <li>淘宝</li>
-            <li>京东</li>
-            <li>MDN</li>
-          </ul>
-          <ul id="navI-txt2">
-            <h3>视频</h3>
-            <li>优酷</li>
-            <li>土豆</li>
-            <li>爱奇艺</li>
-            <li>搜狐</li>
-            <li>Mtime</li>
-            <li>腾讯</li>
-          </ul>
-          </ul>
+          <input checked class="navI-radio" name="nav" type="radio" id="firstNav" checked>
+          <label class="navI-title" for="firstNav" onclick="webPage()">网址大全</label>
         </li>
         <li class="navI">
           <input class="navI-radio" name="nav" type="radio" id="secondNav">
-          <label id="navI-title2" for="secondNav" onclick="videosDisplay()">视频更新</label>
-          <p class="navI-txt ml1"></p>
-          <ul id="videoDisplay"></ul>
+          <label class="navI-title" for="secondNav" onclick="videosDisplay()">视频更新</label>
         </li>
         <li class="navI">
           <input class="navI-radio" name="nav" type="radio" id="thirdNav">
-          <label id="navI-title3" for="thirdNav" onclick="newsDisplay()">新闻头条</label>
-          <ul id="newDisplay"></ul>
+          <label class="navI-title" for="thirdNav" onclick="newsDisplay()">新闻头条</label>
         </li>
       </ul>
+      <div class="txt">
+        <div id="websDisplay">
+          <table id="table_webDisplay">
+            <tr>
+              <th>名站</th>
+              <td>百度</td>
+              <td>淘宝</td>
+              <td>京东</td>
+              <td>搜狐</td>
+              <td>网易</td>
+            </tr>
+            <tr>
+              <th>影视</th>
+              <td>优酷视频</td>
+              <td>腾讯视频</td>
+              <td>爱奇艺</td>
+              <td>暴风影音</td>
+              <td>搜狐视频</td>
+            </tr>
+          </table>
+        </div>
+        <div id="videoDisplay"></div>
+        <div id="newDisplay"></div>
+      </div>
     </div>
   </div>
   <script src = "./lib/node.js"></script>

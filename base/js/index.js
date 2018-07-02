@@ -2,13 +2,9 @@ const input = document.getElementById('text');
 const suggestionList = document.getElementById('suggestionList');
 const nav = document.getElementById('li');
 const buttonValue = document.getElementById('searchButton');
-const firstNav = document.getElementById('navI-title1');
-const secondNav = document.getElementById('navI-title2');
-const thirdNav = document.getElementById('navI-title3');
 const newDisplay = document.getElementById('newDisplay');
 const videoDisplay = document.getElementById('videoDisplay');
-const txt1 = document.getElementById('navI-txt1');
-const txt2 = document.getElementById('navI-txt2');
+const webDisplay = document.getElementById('websDisplay');
 
 suggestionList.addEventListener('click',function(event){
   var target = event.target;
@@ -215,6 +211,7 @@ function cleanSuggestions(suggestionList){
 function webPage(){
   cleanSuggestions(videoDisplay);
   cleanSuggestions(newDisplay);
+
 }
 
 function videosDisplay(){
@@ -227,19 +224,19 @@ function videosDisplay(){
 
 function get360RankedVideos(response){
   cleanSuggestions(newDisplay);
-  cleanSuggestions(txt1);
-  cleanSuggestions(txt2);
+  cleanSuggestions(webDisplay);
   return response.display.hot.map(function(item){
     console.log(item.imgurl);
-    var li = document.createElement('li');
+    var div = document.createElement('div');
+    div.style="width:400px;height:50px;display:inline;"
     var img = document.createElement('img');
+    img.style="width:100px;height:180px;margin:15px 15px 15px 10px;"
     var a = document.createElement('a')
     a.href = item.url;
     var movieName = document.createTextNode(item.moviename);
     img.src = item.imgurl;
     console.log(img);
-    videoDisplay.appendChild(li).appendChild(img);
-    videoDisplay.appendChild(li).appendChild(a).appendChild(movieName);
+    videoDisplay.appendChild(div).appendChild(a).appendChild(img);
     return (item.imgurl,item.moviename,item.url);
   })
 }
@@ -249,30 +246,30 @@ function newsDisplay(){
   script.src = 'https://pc.api.btime.com/btimeweb/getInfoFlow?callback=newsHandle&channel=news&request_pos=channel&citycode=local_330500_330000&sub_channel=&refresh=6&req_count=6&refresh_type=2&pid=3&from=&page_refresh_id=bdd83c10-6f19-11e8-8796-6c92bf0a9cdb&_=1528901698882'
   document.querySelector('head').appendChild(script);
   console.log(script);
-
-  // 增加清空节点函数
 }
 
 function newsHandle(response){
   cleanSuggestions(videoDisplay);
-  cleanSuggestions(txt1);
-  cleanSuggestions(txt2);
+  cleanSuggestions(webDisplay);
   console.log(response);
   return response.data.map(function(item){
     var title = document.createTextNode(item.data.title);
     var url = item.open_url;
     var cover = item.data.covers;
-    var li = document.createElement('li');
+    var div1 = document.createElement('div');
+    var div2 = document.createElement('div');
+    div1.style ="float:left;weight:640;height:200px;margin:10px 10px 10px;"
+    div2.style="font-size:18px;width: 150px;"
     var img = document.createElement('img');
+    img.style="width:190px;height:106px;"
     var a = document.createElement('a');
     if(title && url && cover){
-      img.src = item.data.covers ;
+      img.src = item.data.covers;
       a.href = url;
-      newDisplay.appendChild(li).appendChild(img);
-      newDisplay.appendChild(li).appendChild(a).appendChild(title);
+      newDisplay.appendChild(a).appendChild(div1).appendChild(img);
+      newDisplay.appendChild(a).appendChild(div1).appendChild(div2).appendChild(title);
       console.log(title);
       console.log(url);
-      console.log(cover[0]);
     }
   })
   console.log(response);

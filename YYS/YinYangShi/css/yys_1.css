@@ -1,0 +1,943 @@
+/*测试属性*/
+
+#top_main,
+#foot_box {
+    border: 1px solid black;
+}
+
+/*通用*/
+
+body {
+    font-family: 'microsoft yahei', Arial, Helvetica, sans-serif;
+    font: 12px;
+    color: #666;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff0700;
+    text-decoration: underline;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+/*通用*/
+
+#top,
+#top_main,
+#main,
+#foot_box,
+#footer {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*--**************** 1、页面头部**************** --*/
+
+#top_logo {
+    height: 55px;
+}
+
+#top_logo i {
+    display: inline-block;
+    width: 133px;
+    height: 44px;
+    background: url("../images/images/logo1-1.png") no-repeat;
+    position: relative;
+    left: 200px;
+    top: 5px;
+    cursor: pointer;
+}
+
+#top_logo a {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    left: 700px;
+    bottom: 13px;
+    font-size: 12px;
+    color: #000;
+    padding: 18px 11px;
+    border: 1px solid transparent;
+    text-decoration: none;
+}
+
+#top_logo a:hover {
+    border-bottom: 3px solid #bc2e2e;
+    background: -webkit-linear-gradient(top, #F3F3F3, #fff);
+    border-top: 2px solid #F3F3F3;
+}
+
+#top_logo #game {
+    color: #bc2e2e;
+}
+
+#top_logo a b {
+    display: inline-block;
+    width: 9px;
+    height: 5px;
+    background: url("../images/images/YYS-1.png") no-repeat -103px -100px;
+}
+
+/*--**************** 2、banner**************** --*/
+
+#banner {
+    overflow: hidden;
+    max-width: 1920px;
+    min-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 1000px;
+    height: 3200px;
+    background: url("../images/images/background.jpg") no-repeat center 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/****左上logo图***/
+
+.logo {
+    width: 128px;
+    height: 117px;
+    position: absolute;
+    top: 38px;
+    left: -164px;
+    margin-left: 200px;
+    z-index: 12;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+/******页面头部条********/
+
+.top_page {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+    height: 100px;
+    transition: all .3s linear;
+}
+
+.white {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    opacity: 0.8;
+}
+
+/**扫描下载**/
+
+.smxz {
+    width: 100px;
+    height: 76px;
+    position: absolute;
+    top: 13px;
+    left: 14px;
+}
+
+.smxz>div:first-child {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 16px;
+    height: 66px;
+    background: url("../images/images/index2.png") no-repeat -2213px -162px;
+}
+
+/*logo6的二维码图*/
+
+.logo6 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 76px;
+    height: 76px;
+}
+
+.logo6 img {
+    width: 100%;
+    height: 100%;
+}
+
+/**这是一个手游图片**/
+
+.icon {
+    width: 250px;
+    height: 73px;
+    position: absolute;
+    top: 2px;
+    left: 110px;
+    border-left: 1px solid #ccc;
+}
+
+.icon_in {
+    width: 73px;
+    height: 73px;
+    position: absolute;
+    top: 0;
+    left: 14px;
+    background: url("../images/images/index2.png") no-repeat -2120px -162px;
+}
+
+.icon_in a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.icon div:last-child {
+    width: 143px;
+    height: 52px;
+    position: absolute;
+    top: 10px;
+    left: 102px;
+    background: url("../images/images/index2.png") no-repeat -2249px -162px;
+}
+
+/*****主要内容*********/
+
+#main {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#main .main_top {
+    height: 1150px;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.yych {
+    width: 220px;
+    left: 20px;
+    top: -84px;
+    position: absolute;
+    margin-top: 200px;
+    height: 615px;
+    opacity: 0;
+    transition: all .5s linear;
+}
+
+.yych img {
+    width: 100%;
+}
+
+.people {
+    position: absolute;
+    top: -9px;
+    width: 946px;
+    left: 292px;
+    height: 1036px;
+}
+
+.people img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.people {
+    opacity: 0;
+    transition: all .8s linear .3s;
+}
+
+.people a {
+    display: block;
+    width: 60px;
+    height: 165px;
+    position: absolute;
+}
+
+.name1 {
+    left: 398px;
+    top: 111px;
+    background: url("../images/images/bs6.png") no-repeat;
+}
+
+.name2 {
+    left: 713px;
+    top: 104px;
+    background: url("../images/images/bs5.png") no-repeat;
+}
+
+.name3 {
+    left: 72px;
+    top: 248px;
+    background: url("../images/images/bs4.png") no-repeat;
+}
+
+.name4 {
+    left: 259px;
+    top: 322px;
+    background: url("../images/images/bs3.png") no-repeat;
+}
+
+.name5 {
+    left: 812px;
+    top: 359px;
+    background: url("../images/images/bs2.png") no-repeat;
+}
+
+.name6 {
+    left: 327px;
+    top: 493px;
+    background: url("../images/images/bs1.png") no-repeat;
+}
+
+/**下半部分的活动*/
+
+.activity {
+    width: 1200px;
+    height: 954px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.top_1 {
+    opacity: 0;
+    top: 100px;
+    transition: all .5s linear;
+    width: 518px;
+    height: 93px;
+    position: absolute;
+    margin-top: -50px;
+    left: 50%;
+    margin-left: -259px;
+    background: url("../images/images/index2.png") no-repeat -1582px -162px;
+}
+
+.bottom_img {
+    width: 940px;
+    height: 968px;
+    position: absolute;
+    top: 306px;
+    left: 128px;
+    margin-top: -200px;
+}
+
+.img_list {
+    opacity: 0;
+    top: 50px;
+    transition: all .5s linear;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.img_list li {
+    width: 306px;
+    height: 314px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.img_list li div {
+    position: absolute;
+}
+
+.activity .bottom_img .show li:hover {
+    opacity: 1;
+}
+
+.activity .bottom_img .show li {
+    opacity: 0;
+    transition: all .3s linear;
+}
+
+.img_list li:first-child {
+    z-index: 0;
+    top: 12px;
+    left: 215px;
+    background: url("../images/images/index2.png") no-repeat -1020px -334px;
+}
+
+.img_list li:nth-child(2) {
+    top: 169px;
+    left: 384px;
+    background: url("../images/images/index2.png") no-repeat -609px -492px;
+}
+
+.img_list li:nth-child(3) {
+    top: 173px;
+    left: 48px;
+    background: url("../images/images/index2.png") no-repeat -1020px 0px;
+}
+
+.img_list li:nth-child(4) {
+    top: 331px;
+    left: 228px;
+    background: url("../images/images/index2.png") no-repeat -326px -828px;
+}
+
+.img_list li:nth-child(5) {
+    top: 338px;
+    left: 532px;
+    background: url("../images/images/index2.png") no-repeat 0px -828px;
+}
+
+.img_list li:nth-child(6) {
+    top: 510px;
+    left: 376px;
+    background: url("../images/images/index2.png") no-repeat -283px -492px;
+}
+
+.img_list li:nth-child(7) {
+    top: 102px;
+    left: 634px;
+    background: url("../images/images/index2.png") no-repeat -652px -828px;
+}
+
+.img_list li:nth-child(8) {
+    top: 414px;
+    left: -15px;
+    background: url("../images/images/index2.png") no-repeat -978px -828px;
+}
+
+.img_list li:first-child div {
+    background: url("../images/images/index2.png") no-repeat -1346px 0px;
+    width: 216px;
+    height: 302px;
+    top: -8px;
+    left: 32px;
+}
+
+.img_list li:first-child:hover {
+    z-index: 10;
+}
+
+.img_list li:nth-child(2) div {
+    background: url("../images/images/index2.png") no-repeat -1156px -1162px;
+    top: 57px;
+    left: 25px;
+    width: 223px;
+    height: 193px;
+}
+
+.img_list li:nth-child(2):hover {
+    z-index: 10;
+}
+
+.img_list li:nth-child(3) div {
+    background: url("../images/images/index2.png") no-repeat -508px -1162px;
+    top: 35px;
+    left: -20px;
+    width: 264px;
+    height: 247px;
+}
+
+.img_list li:nth-child(3):hover {
+    z-index: 10;
+}
+
+.img_list li:nth-child(4) div {
+    background: url("../images/images/index2.png") no-repeat -792px -1162px;
+    width: 344px;
+    height: 200px;
+    top: 59px;
+    left: -98px;
+}
+
+.img_list li:nth-child(4):hover {
+    z-index: 10;
+}
+
+.img_list li:nth-child(5) div {
+    background: url("../images/images/index2.png") no-repeat -1346px -322px;
+    width: 198px;
+    height: 184px;
+    top: 61px;
+    left: 47px;
+}
+
+.img_list li:nth-child(5):hover {
+    z-index: 10;
+}
+
+.img_list li:nth-child(6) div {
+    background: url("../images/images/index2.png") no-repeat -254px -1162px;
+    width: 234px;
+    height: 268px;
+    top: 26px;
+    left: 29px;
+}
+
+.img_list li:nth-child(6):hover {
+    z-index: 10;
+}
+
+.img_list li:nth-child(7) div {
+    background: url("../images/images/index2.png") no-repeat 0px -492px;
+    width: 263px;
+    height: 316px;
+    top: -62px;
+    left: -16px;
+}
+
+.img_list li:nth-child(7):hover {
+    z-index: 10;
+}
+
+.img_list li:nth-child(8) div {
+    background: url("../images/images/index2.png") no-repeat 0px -1162px;
+    width: 234px;
+    height: 279px;
+    top: 15px;
+    left: 10px;
+}
+
+.img_list li:nth-child(8):hover {
+    z-index: 10;
+}
+
+/*下载*/
+
+.download {
+    opacity: 0;
+    top: 712px;
+    left: 50px;
+    position: absolute;
+    margin-top: -200px;
+    width: 282px;
+    height: 110px;
+    transition: all .5s linear;
+}
+
+.down {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 7px;
+    background: #fff;
+    width: 93px;
+    height: 93px;
+    border-radius: 4px;
+}
+
+.down>img {
+    width: 100%;
+    height: 100%;
+}
+
+.line {
+    width: 100%;
+    height: 8%;
+    position: absolute;
+    top: 0;
+    left: .46%;
+    -webkit-animation: xiantiao 3s linear infinite;
+}
+
+/**二维码扫描动画**/
+
+@-webkit-keyframes xiantiao {
+    form {
+        position: absolute;
+        top: 6px;
+    }
+    50% {
+        position: absolute;
+        top: 92px;
+    }
+    to {
+        position: absolute;
+        top: 6px;
+    }
+}
+
+.line img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.apple {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    width: 171px;
+    height: 51px;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.apple:hover {
+    opacity: 0.9;
+}
+
+.android {
+    display: block;
+    position: absolute;
+    top: 51%;
+    right: 0;
+    cursor: pointer;
+}
+
+.android:hover {
+    opacity: 0.8;
+}
+
+/*控制音频*/
+
+.people a audio {
+    opacity: 0;
+    height: 20px;
+    cursor: pointer;
+    width: 1px;
+}
+
+/*--**************** banner里的页面尾部**************** --*/
+
+/*1、分享*/
+
+#footer {
+    position: relative;
+    bottom: -170px;
+    left: 0;
+    background: url("../images/images/background.png") no-repeat;
+    height: 200px;
+    transition: all .5s linear;
+    opacity: 0;
+}
+
+#footer div {
+    position: relative;
+    right: 50px;
+    top: 20px;
+}
+
+#share ul li {
+    /*颜色，行高,左浮动*/
+    color: #666;
+    line-height: 22px;
+    float: left;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+#share ul li a {
+    color: #666666;
+}
+
+#share ul li i {
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    padding-right: 3px;
+    position: relative;
+    top: 1px;
+}
+
+#share ul li a:hover {
+    color: #F02360;
+    text-decoration: none;
+}
+
+#share ul li:nth-child(2) i {
+    background: url("../images/images/wx1.png") no-repeat;
+}
+
+#share ul li:nth-child(3) i {
+    background: url("../images/images/yx1.png") no-repeat;
+}
+
+#share ul li:nth-child(4) i {
+    background: url("../images/images/xl1.png") no-repeat;
+}
+
+#share ul li:nth-child(5) i {
+    background: url("../images/images/qq1.png") no-repeat;
+}
+
+#share ul li:nth-child(2):hover i {
+    background: url("../images/images/wx2.png") no-repeat;
+}
+
+#share ul li:nth-child(3):hover i {
+    background: url("../images/images/yx2.png") no-repeat;
+}
+
+#share ul li:nth-child(4):hover i {
+    background: url("../images/images/xl2.png") no-repeat;
+}
+
+#share ul li:nth-child(5):hover i {
+    background: url("../images/images/qq2.png") no-repeat;
+}
+
+#share ul {
+    overflow: hidden;
+    padding: 10px 0px 10px 500px;
+}
+
+#share {
+    /*居中*/
+    text-align: center;
+}
+
+/*2、网易LOGO*/
+
+#copy {
+    text-align: center;
+}
+
+#copy s {
+    width: 118px;
+    height: 31px;
+    display: inline-block;
+    background-image: url("../images/images/logo4.png");
+}
+
+#copy i {
+    width: 134px;
+    height: 31px;
+    display: inline-block;
+    background-image: url("../images/images/logo5.png");
+}
+
+#copy span a {
+    font-size: 13px;
+    color: #333333;
+}
+
+#copy span {
+    font-size: 13px;
+    color: #000;
+    position: relative;
+    bottom: 20px;
+    line-height: 20px;
+    padding-left: 16px;
+}
+
+#copy b a {
+    color: #fff;
+    font-size: 12px;
+}
+
+#copy b {
+    position: relative;
+    float: right;
+    right: 355px;
+    bottom: 21px;
+    display: block;
+    border: 1px solid #610000;
+    padding: 1px 4px 4px 4px;
+    background: #610000;
+    font-weight: normal;
+}
+
+/*3、底部文字*/
+
+#text {
+    position: relative;
+    bottom: 10px;
+    padding-left: 335px;
+    color: #000;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+/* 最后一个3D轮播模块 */
+
+.tese {
+    opacity: 0;
+    width: 518px;
+    height: 93px;
+    position: relative;
+    top: 260px;
+    margin-top: -50px;
+    left: 50%;
+    margin-left: -259px;
+    background: url("../images/images/index2.png") no-repeat -1602px -272px;
+    transition: all .5s linear;
+}
+
+/* 最后一个3D轮播模块 */
+
+.box {
+    opacity: 0;
+    margin-top: 300px;
+    width: 100%;
+    height: 438px;
+    position: relative;
+    top: 50px;
+    transition: all .5s linear;
+}
+
+.list {
+    width: 1200px;
+    height: 438px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    width: 60px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    background: #E6D2A0;
+    cursor: pointer;
+}
+
+.next {
+    right: 0;
+}
+
+.list li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    opacity: 1;
+    transition: all 0.3s ease-out;
+}
+
+.box img {
+    width: 774px;
+    height: 438px;
+    border: none;
+    float: left;
+}
+
+.p1 {
+    transform: translate3d(-224px, 0, 0) scale(0.81);
+}
+
+.p2 {
+    transform: translate3d(0px, 0, 0) scale(0.81);
+    transform-origin: 0 50%;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.list .p3 {
+    transform: translate3d(224px, 0, 0) scale(1);
+    z-index: 3;
+    opacity: 1;
+}
+
+.p4 {
+    transform: translate3d(449px, 0, 0) scale(0.81);
+    transform-origin: 100% 50%;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.p5 {
+    transform: translate3d(672px, 0, 0) scale(0.81);
+}
+
+.p6 {
+    transform: translate3d(896px, 0, 0) scale(0.81);
+}
+
+.p7 {
+    transform: translate3d(1120px, 0, 0) scale(0.81);
+}
+
+.buttons {
+    position: absolute;
+    width: 1200px;
+    height: 30px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -600px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.buttons a {
+    display: inline-block;
+    width: 35px;
+    height: 5px;
+    padding-top: 4px;
+    cursor: pointer;
+}
+
+/*span{*/
+
+/*	display: block;*/
+
+/*	width: 35px;*/
+
+/*	height: 1px;*/
+
+/*	background: red;*/
+
+/*}*/
+
+.blue {
+    background: blue;
+}
+
+.btn img {
+    width: 60px;
+    height: 100px;
+}

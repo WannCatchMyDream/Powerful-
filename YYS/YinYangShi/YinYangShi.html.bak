@@ -1,0 +1,2686 @@
+</blockquote>
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <link rel="stylesheet" href="YinYangShi.css">
+  <title>i love you</title>
+ </head>
+ <body>
+  <!-- ***************1、网页头部************ -->
+  <header id="top">
+	<div id="top_logo">
+	    <!--头部logo -->
+		<i></i>
+		<a href="http://127.0.0.1/YYS/YYS_zhuce/yys_zc.html">注册账号</a>
+		<a href="#">安卓充值</a>
+		<a href="#" id="game">
+			网易游戏全目录
+			<!--下三角图标 -->
+			<b></b>
+		</a>
+		<a href="#">安卓充值9.8折</a>  
+	</div>
+  </header>
+  <!-- ***************2、banner************ -->
+  <div id="banner">
+	  <!--banner人物背景 -->
+	  <div id="banner_top">
+	      <!--这是阴阳师图标-->
+		  <span class="logo"></span>
+		   <!--这是斗智的图-->
+		  <div class="wisdom"></div>
+		<!--这是一个人物男图-->
+		<div class="guding">
+		  <div class="boy_img"></div>
+		<!--这是一个人物女图-->
+		  <div class="gril_img"></div>
+		</div>
+		<!--这是一个GIF图-->
+		  <a href="#" class="rabbit">
+		    <img src="images/bunny.gif">
+		  </a>
+			<!--主要内容 -->
+			  <div class="banner_main">
+				     <div class="banner_main_border">
+						    <a href="#banner_main" class="banner_main_a"></a>
+								<span class="banner_txt"></span>
+								<div class="banner_code">
+								     <!--这是一条线-->
+								    <img src="images/line.png" class="code_line">
+										<!--这是二维码-->
+									  <img src="images/logo6.png">
+								</div> 
+								<div id="banner_button">	
+								  <span></span>
+									<a href="#" class="apple"></a>
+								  <span class="span1"></span>
+									<a href="#" class="apple android"></a>
+							  </div>
+						</div>  
+					<a href="#banner_main" class="smxz"></a>
+				</div>		
+	   
+	</div>
+	    <!--官网首页等-->
+	<div id="top_bar">
+		   <!-- 左边隐藏banner部分 -->
+			<div class="left_bar">
+				<span>扫码下载</span>
+				<img src="images/ewm.png">
+				<a href="http://127.0.0.1/YYS/YinYangShi/YinYangShi.html" target="_blank">
+				    <!-- 这是一个图片 -->
+					<b></b>
+					<div>
+						<h3>阴阳师</h3>
+						<p>网易和风匠制</p>
+					</div>
+				</a>
+			</div>
+			<!-- 右边显示banner部分 -->
+			<ul class="right_bar">
+				<li>
+					<a href="http://127.0.0.1/YYS/YinYangShi/YinYangShi.html" target="_blank">官网首页</a>
+					<span class="top_line"></span>
+				</li>
+				<li>
+					<a href="http://127.0.0.1/YYS/YYS_2/yys_2.html" target="_blank">新闻资讯</a>
+					<span class="top_line"></span>
+				</li>
+				<li>
+					<a href="#" target="_blank">游戏攻略</a>
+					<span class="top_line"></span>
+				</li>
+				<li>
+					<a href="http://127.0.0.1/YYS/YYS_1/yys_1.html" target="_blank">游戏特色</a>
+					<span class="top_line"></span>
+				</li>
+				<li>
+					<a href="http://127.0.0.1/YYS/YYS_3/YYS_3.html" target="_blank">同人专区</a>
+					<span class="top_line"></span>
+				</li>
+				<li>
+					<a href="#" target="_blank">官方渠道</a>
+				</li>
+			</ul>
+		</div>	
+  </div>
+  <!--****************3、页面主体**************** -->
+  <section id="main"> 
+		<div id="right_main" >
+			    <!--黄色三角形 -->
+					<i class="triangle"></i>
+					<!--这是游戏日历 -->
+					<s></s>
+					<!--选项-->
+					<div class="right_option clear" >
+						<a href="#" class="yellow_border">
+							 <span>
+							     斗技,每日12:00-13:00,21:00-22:00
+									<br>
+									协同斗技,每周六日14:00-15:30
+							 </span>
+						</a>
+						<a href="#" class="ovo">
+							 <span>
+							     通关探索副本概率开启,随机
+									<br>
+									获得金币,达摩碎片,达摩
+							 </span>
+						</a>
+						<a href="#" class="yellow_border eve">
+							 <span>
+							    妖气封印发现，CD1小时
+							 </span>
+						</a>
+							<a href="#" class="ovo shoulie">
+							 <span>
+							    周一至周四鬼王，周五-周日阴界之门，时间19-21点
+							 </span>
+						</a>
+						<a href="#" class="yellow_border xuanshang">
+							 <span>
+							    每日5点和18点重置
+							 </span>
+						</a>
+							<a href="#" class="ovo jiejie">
+							 <span>
+							     个人每周一6点重置，阴阳寮每日5点重置，周六日奖励翻倍
+							 </span>
+						</a>
+						<a href="#" class="ovo huo">
+							 <span>
+							     御魂副本获得入场卷，副本产出新御魂「木魅」「薙魂」「返魂香」
+							 </span>
+						</a>
+						<!--最下面的图片-->
+						<a href="#" class="web_activity"></a>
+						 <a href="#" class="web_activity weixin"></a>
+						 <a href="#" class="web_activity luntan"></a>
+						 <!--拉伸菜单-->
+						<a href="#" class=" fuben fuben1">
+							 <span>
+							     【周二】涅槃之火、三味、招财猫、狰
+							 </span>
+							 <div class="yinchang">
+										<span>【周一】雪幽魂、地藏像、鸣屋、网切</span>
+										<span>【周二】涅槃之火、三味、招财猫、狰</span>
+										<span>【周三】 魍魉之匣、被服、阴摩罗、魅妖</span>
+										<span>【周四】反枕、心眼、树妖、针女</span>
+										<span>【周五】日女巳时、镜姬、钟灵、破势</span>
+										<span>【周六】随机掉落全部御魂</span>
+										<span>【周日】随机掉落全部御魂</span>
+							 </div>
+						</a>
+					</div>
+			</div>
+	     <!--左侧轮播图-->
+	     <div id="main_left">
+						<div class="left_img">
+						</div>
+			 </div>
+			 <!--轮播图圆圈-->
+			 <div class="left_nav">
+						<a href="#"></a>
+						<a href="#"></a>
+						<a href="#"></a>
+			 </div>
+			 <!--中间内容部分-->
+			 <div class="center_news">
+			       <!--新闻头部-->
+			      <div class="news_top clear">
+								<a data-i="0" href="#">
+								    <!--这是文字-->
+								   <span></span>
+									 <!--这是蓝色椭圆图标-->
+									 <b class="blue1"></b>
+									 <!--这是斜杠-->
+									 <i></i>
+								</a>
+								<a  data-i="1" href="#">
+								    <!--这是文字-->
+								   <span></span>
+									 <!--这是蓝色椭圆图标-->
+									 <b></b>
+									 <!--这是斜杠-->
+									 <i></i>
+								</a>
+								<a data-i="2"  href="#">
+								    <!--这是文字-->
+								   <span></span>
+									 <!--这是蓝色椭圆图标-->
+									 <b></b>
+									 <!--这是斜杠-->
+									 <i></i>
+								</a>
+								<a data-i="3"  href="#">
+								    <!--这是文字-->
+								   <span></span>
+									 <!--这是蓝色椭圆图标-->
+									 <b></b>
+									 <!--这是斜杠-->
+									 <i></i>
+								</a>
+								<a data-i="4"  href="#">
+								    <!--这是文字-->
+								   <span></span>
+									 <!--这是蓝色椭圆图标-->
+									 <b></b>
+								</a>
+						</div>
+						 <!--新闻身体-->
+						<div class="news_body clear">
+							 <div class="news_list">
+							         <ul>
+									        <li>
+												<a href="#">-【新闻】 《阴阳师》现世召唤脑洞盘点——没有最大，只有更大</a>
+												<span>2017-02-07</span>
+											</li>
+											<li>
+												<a href="#">-【公告】 2月4日维护公告</a>
+												<span>2017-02-02</span>
+											</li>
+											<li>
+												<a href="#">-【新闻】 声控召唤 阴阳师角色配音大赛开启！</a>
+												<span>2017-01-26</span>
+											</li>
+											<li>
+												<a href="#">-【活动】 百绘罗衣，式神皮肤设计大赛来袭！</a>
+												<span>2017-01-24</span>
+											</li>
+											<li>
+												<a href="#">-【推荐】 超亮眼！《阴阳师》收入登顶全球iOS游戏榜</a>
+												<span>2016-11-24</span>
+											</li>
+									 </ul>
+									 <ul>
+									        <li>
+												<a href="#">-【新闻】 新皮肤新副本 《阴阳师》女儿节版本即将上线</a>
+												<span>2017-02-07</span>
+											</li>
+											<li>
+												<a href="#">-【新闻】 非酋逆袭 《阴阳师》式神年度总决选应援寮奖励派送</a>
+												<span>2017-02-02</span>
+											</li>
+											<li>
+												<a href="#">-【新闻】 皮肤上新！童男童女初长成</a>
+												<span>2017-01-26</span>
+											</li>
+											<li>
+												<a href="#">-【新闻】 天机智囊团第一期入选名单公布</a>
+												<span>2017-01-24</span>
+											</li>
+											<li>
+												<a href="#">-【新闻】 《阴阳师》式神返魂小剧场——崽们的心里话</a>
+												<span>2016-11-24</span>
+											</li>
+									 </ul>
+									 <ul>
+									        <li>
+												<a href="#">-【公告】 3月3日体验服维护更新公告</a>
+												<span>2017-02-07</span>
+											</li>
+											<li>
+												<a href="#">-【公告】 3月3日正式服维护更新公告</a>
+												<span>2017-02-02</span>
+											</li>
+											<li>
+												<a href="#">-【公告】 2月24日维护更新公告</a>
+												<span>2017-01-26</span>
+											</li>
+											<li>
+												<a href="#">-【公告】 抢先体验服2月24日维护公告</a>
+												<span>2017-01-24</span>
+											</li>
+											<li>
+												<a href="#">-【公告】 2月17日维护更新公告</a>
+												<span>2016-11-24</span>
+											</li>
+									 </ul>
+									 <ul>
+									        <li>
+												<a href="#">-【活动】 大触觉醒第二季！同人插画大赛开启！</a>
+												<span>2017-02-07</span>
+											</li>
+											<li>
+												<a href="#">-【活动】 新服集结，阴阳寮入境预检开启！提前领个崽儿回家~</a>
+												<span>2017-02-02</span>
+											</li>
+											<li>
+												<a href="#">-【活动】 百绘罗衣，式神皮肤设计大赛来袭！</a>
+												<span>2017-01-26</span>
+											</li>
+											<li>
+												<a href="#">-【活动】 非酋逆袭，为崽而战！人气式神年度总决选火热开启</a>
+												<span>2017-01-24</span>
+											</li>
+											<li>
+												<a href="#">-【活动】 百鬼映画！《阴阳师》首届MMD大赛华丽开启！</a>
+												<span>2016-11-24</span>
+											</li>
+									 </ul>
+									 <ul>
+									        <li>
+												<a href="#">-【媒体】 AppSo2016 《阴阳师》登年度榜单</a>
+												<span>2017-02-07</span>
+											</li>
+											<li>
+												<a href="#">-【媒体】 【17173】我的领导是个极品 他为抽SSR去了晴明神社</a>
+												<span>2017-02-02</span>
+											</li>
+											<li>
+												<a href="#">-【媒体】 【17173】没想到你是这样的姑获鸟 一个SR为何有SSR的实力？</a>
+												<span>2017-01-26</span>
+											</li>
+											<li>
+												<a href="#">-【媒体】 【18183】阴阳师协同斗技登顶阵容:无拉条无控制</a>
+												<span>2017-01-24</span>
+											</li>
+											<li>
+												<a href="#">-【媒体】 【爱玩】像我这么能打的只有两个！阴阳师那些沉迷输出的治疗</a>
+												<span>2016-11-24</span>
+											</li>
+									 </ul>
+
+							 </div>
+						</div>
+			 </div>
+			 <div class="leading_actor clear">
+			      <div class="actor_top">
+						<!--平安之旅的图标-->					       
+									<i></i>
+						<!--这是省略号-->
+						     <span></span>
+						<!--这是弑神图标-->
+								 <a href="#" class="shishen" data-y="0">
+											<b></b>
+											<s></s>
+								 </a>
+								 <span></span>
+								 <a href="#" class="shishen zhujue" data-y="1">
+											<b></b>
+											<s></s>
+								 </a>
+						</div>
+						<!--主角下面身体部分 -->
+						<div class="actor_body ">
+						     <div class="actor_ssr">
+								    <div>
+														<a href="#">全部</a>
+														<a href="#">SSR</a>
+														<a href="#">SR</a>
+														<a href="#">R</a>
+														<a href="#">N</a>
+										</div>
+								 </div>
+								 <!--ssr下面的图标列表 -->
+								 <div class="ssr_img">
+								      <!--左右侧箭头图标-->
+											<a href="#" class="left_arrows"></a>
+										  <a href="#" class="right_arrows"></a>
+											<!--圆形图标-->
+											<div class="ssr_tubiao">
+											<div class="rongqi">
+											     <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>桃花妖</b>
+																			<img src="images/200.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">雪女</b>
+																			<img src="images/201.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>三尾狐</b>
+																			<img src="images/202.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>灯笼鬼</b>
+																			<img src="images/203.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="tongzi">座敷童子</b>
+																			<img src="images/205.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鲤鱼精</b>
+																			<img src="images/206.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>九命猫</b>
+																			<img src="images/207.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">狸猫</b>
+																			<img src="images/208.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">河童</b>
+																			<img src="images/209.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鬼使白</b>
+																			<img src="images/210.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul class="right_line">
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鬼使黑</b>
+																			<img src="images/211.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">童男</b>
+																			<img src="images/212.png">
+																	</a>
+														 </li>
+												 </ul>
+												 <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>童女</b>
+																			<img src="images/213.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">雪女</b>
+																			<img src="images/214.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>三尾狐</b>
+																			<img src="images/215.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>灯笼鬼</b>
+																			<img src="images/216.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="tongzi">座敷童子</b>
+																			<img src="images/217.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鲤鱼精</b>
+																			<img src="images/218.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>九命猫</b>
+																			<img src="images/219.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">狸猫</b>
+																			<img src="images/220.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">河童</b>
+																			<img src="images/221.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鬼使白</b>
+																			<img src="images/222.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul class="right_line">
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鬼使黑</b>
+																			<img src="images/223.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">童男</b>
+																			<img src="images/224.png">
+																	</a>
+														 </li>
+												 </ul>
+												   <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>桃花妖</b>
+																			<img src="images/225.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">雪女</b>
+																			<img src="images/226.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>三尾狐</b>
+																			<img src="images/227.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>灯笼鬼</b>
+																			<img src="images/228.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="tongzi">座敷童子</b>
+																			<img src="images/409.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鲤鱼精</b>
+																			<img src="images/230.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>九命猫</b>
+																			<img src="images/231.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">狸猫</b>
+																			<img src="images/232.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">河童</b>
+																			<img src="images/233.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鬼使白</b>
+																			<img src="images/234.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul class="right_line">
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鬼使黑</b>
+																			<img src="images/236.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">童男</b>
+																			<img src="images/237.png">
+																	</a>
+														 </li>
+												 </ul>
+												 <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>桃花妖</b>
+																			<img src="images/238.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">雪女</b>
+																			<img src="images/241.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>三尾狐</b>
+																			<img src="images/242.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>灯笼鬼</b>
+																			<img src="images/243.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="tongzi">座敷童子</b>
+																			<img src="images/244.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鲤鱼精</b>
+																			<img src="images/245.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>九命猫</b>
+																			<img src="images/246.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">狸猫</b>
+																			<img src="images/247.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">河童</b>
+																			<img src="images/248.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鬼使白</b>
+																			<img src="images/249.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul class="right_line">
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鬼使黑</b>
+																			<img src="images/250.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">童男</b>
+																			<img src="images/251.png">
+																	</a>
+														 </li>
+												 </ul>
+												 												 <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>桃花妖</b>
+																			<img src="images/252.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">雪女</b>
+																			<img src="images/253.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>三尾狐</b>
+																			<img src="images/254.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>灯笼鬼</b>
+																			<img src="images/255.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="tongzi">座敷童子</b>
+																			<img src="images/256.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鲤鱼精</b>
+																			<img src="images/257.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>九命猫</b>
+																			<img src="images/258.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">狸猫</b>
+																			<img src="images/259.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">河童</b>
+																			<img src="images/260.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鬼使白</b>
+																			<img src="images/261.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul class="right_line">
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鬼使黑</b>
+																			<img src="images/262.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">童男</b>
+																			<img src="images/263.png">
+																	</a>
+														 </li>
+												 </ul>
+												 												 <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>桃花妖</b>
+																			<img src="images/264.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">雪女</b>
+																			<img src="images/265.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>三尾狐</b>
+																			<img src="images/266.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>灯笼鬼</b>
+																			<img src="images/267.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="tongzi">座敷童子</b>
+																			<img src="images/268.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鲤鱼精</b>
+																			<img src="images/269.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>九命猫</b>
+																			<img src="images/270.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">狸猫</b>
+																			<img src="images/271.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">河童</b>
+																			<img src="images/272.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鬼使白</b>
+																			<img src="images/273.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul class="right_line">
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鬼使黑</b>
+																			<img src="images/274.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">童男</b>
+																			<img src="images/276.png">
+																	</a>
+														 </li>
+												 </ul>
+												 												 <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>桃花妖</b>
+																			<img src="images/277.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">雪女</b>
+																			<img src="images/278.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>三尾狐</b>
+																			<img src="images/279.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>灯笼鬼</b>
+																			<img src="images/280.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="tongzi">座敷童子</b>
+																			<img src="images/281.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鲤鱼精</b>
+																			<img src="images/400.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>九命猫</b>
+																			<img src="images/401.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">狸猫</b>
+																			<img src="images/403.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">河童</b>
+																			<img src="images/404.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鬼使白</b>
+																			<img src="images/405.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul class="right_line">
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鬼使黑</b>
+																			<img src="images/406.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">童男</b>
+																			<img src="images/407.png">
+																	</a>
+														 </li>
+												 </ul>
+												 												 <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>桃花妖</b>
+																			<img src="images/408.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">雪女</b>
+																			<img src="images/409.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>三尾狐</b>
+																			<img src="images/202.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>灯笼鬼</b>
+																			<img src="images/203.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="tongzi">座敷童子</b>
+																			<img src="images/205.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鲤鱼精</b>
+																			<img src="images/206.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>九命猫</b>
+																			<img src="images/207.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">狸猫</b>
+																			<img src="images/208.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul>
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">河童</b>
+																			<img src="images/209.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鬼使白</b>
+																			<img src="images/210.png">
+																	</a>
+														 </li>
+												 </ul>
+												  <ul class="right_line">
+												     <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b>鬼使黑</b>
+																			<img src="images/211.png">
+																	</a>
+														 </li>
+														 <li>
+																	<a href="#" class="tu_1">
+																	     <span> </span> 
+																			 <b class="xuenv">童男</b>
+																			<img src="images/212.png">
+																	</a>
+														 </li>
+												 </ul>
+											</div>
+										</div>
+								 </div>
+						</div>
+						<!-- 点击后猪脚显示 -->
+						<div class="actor_zhujue">
+							<div class="nan_zhujue">
+								<a href="#" class="target" data-x="0">
+									<span>晴明</span>
+									<em></em>
+								</a>
+								<a href="#" data-x="1">
+								    <span>神乐</span>
+									<em></em>
+								</a>
+								<a href="#" data-x="2">
+								    <span>源博雅</span>
+									<em></em>
+								</a>
+								<a href="#" data-x="3">
+								    <span>八百比丘尼</span>
+									<em></em>
+								</a>
+							</div>
+							<div class="qingming qm">
+								<img src="images/qingming.png" alt="">
+								<div class="qingming_info">
+								   <span></span>
+								   <h3>晴明</h3>
+								   <p>
+										京都城中极具盛名的天才阴阳师<br>
+										却不知为何失去了自己的记忆<br>
+										等待着他的是寻回记忆的喜悦<br>
+										还是不堪回首的残忍真相
+								   </p>
+								</div>
+							</div>
+							<div class="qingming sl">
+								<img src="images/shenle.png" alt="">
+								<div class="qingming_info">
+								   <span></span>
+								   <h3>神乐</h3>
+								   <p>
+										善良而沉默的神秘少女<br>
+										失忆后便跟随在晴明身边<br>
+										拥有敏锐的直觉和强大的通灵能力<br>
+										以及不为人知的过去
+								   </p>
+								</div>
+							</div>
+							<div class="qingming yfy">
+								<img src="images/yfy.png" alt="">
+								<div class="qingming_info">
+								   <span></span>
+								   <h3>源博雅</h3>
+								   <p>
+										拥有皇室血统的贵族青年<br>
+										擅长弓术与结界之术<br>
+										性情孤傲爽直<br>
+										但似乎一直在寻找某个重要的人
+								   </p>
+								</div>
+							</div>
+							<div class="qingming bbbqn">
+								<img src="images/bbbqn.png" alt="">
+								<div class="qingming_info">
+								   <span></span>
+								   <h3>八百比丘尼</h3>
+								   <p>
+										因误食人鱼肉而不老不死<br>
+										能力超凡的流浪占卜师<br>
+										一直在凤凰林中等待着<br>
+										占卜之梦预言的命运之人
+								   </p>
+								</div>
+							</div>
+						</div>
+			      </div>
+			 <!--第三部分搜索栏-->
+			 <div class="main_search clear">
+			     <!--左边搜索栏-->
+					<div class="left_search">
+							 <div class="search">
+										<input placeholder="请输入寮间问题">
+										<!--查询图标-->
+										<b></b>
+										<div class="no_img">
+												<div class="two_img">
+												</div> 
+												<!--黑色轮播圆圈-->
+												<div class="left_nav rad_black">
+																<a href="#"></a>
+																<a href="#"></a>
+												 </div>
+											</div>	
+										 <div class="system">
+												       <a href="#">
+																		<span></span>
+																		<i></i>
+															 </a>
+															 <a href="#">
+																		<span></span>
+																		<i></i>
+															 </a>
+															 <a href="#">
+																		<span></span>
+																		<i></i>
+															 </a>
+															 <a href="#">
+																		<span></span>
+															 </a>
+										 </div>
+							 </div>
+					</div>
+					 <!--右边攻略栏-->
+					<div class="right_search">
+					       <!--攻略头部-->
+								<div class="rgt_top actor_top">
+										<!--平安之旅的图标-->
+										   <a href="#" data-n="0">
+												<i></i>
+										   </a>
+										<!--这是省略号-->
+											<span></span>
+									<!--这是弑神图标-->
+											<a href="#" class="shishen" data-n="1">
+													<b></b>
+													<s></s>
+											</a>
+													<span></span>
+											<a href="#" class="shishen zhujue shishen1" data-n="2">
+													<b></b>
+													<s></s>
+											</a>
+													<span></span>
+											<a href="#" class="shishen douji" data-n="3">
+													<b></b>
+													<s></s>
+											</a>
+													<span></span>
+											<a href="#" class="shishen wanfa" data-n="4">
+													<b></b>
+													<s></s>
+											</a>
+											<u></u>
+							    </div>
+								<!--攻略下部-->
+						<div class="rgt_body">
+						  <div class="rgt_title">
+							<ul>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【御魂】 持弓少女——易养成单点爆伤【白狼】</span>
+										</p>
+										<i>作者：晓羽</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【御魂】 最初开始，爱下雪的强控式神【雪女】</span>
+										</p>
+										<i>作者：晓羽</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【斗技】 单体克星！后手流核心——【椒图】！</span>
+										</p>
+										<i>作者：阿尔杰塔的小跟班</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【斗技】 【协同斗技】主流辅助式神解析！</span>
+										</p>
+										<i>作者：酱酱酱丶</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【斗技】 超强单体40米大砍刀！【妖刀姬】</span>
+										</p>
+										<i>作者：阿尔杰塔的小跟班</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【御魂】 【业原火】痴之阵推荐过关配置</span>
+										</p>
+										<i>作者：穷人</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										  <span>【新手】 稳字诀，【晴明】技能解析</span>
+										</p>
+										<i>作者：绯蜂</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										  <span>【新手】 为美腻小姐姐奋斗！平民过【妖刀本】</span>
+										</p>
+										<i>作者：绯蜂</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										  <span>【御魂】 【鬼使白】！不为人所知的冷门战神！</span>
+										</p>
+										<i>作者：琅轩</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【斗技】 【斗技】核心输出的培养推荐分析</span>
+										</p>
+										<i>作者：真白</i>
+								   </a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【新手】 稳字诀，【晴明】技能解析</span>
+										</p>
+										<i>作者：八西轰</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【新手】 手把手教你玩“赚”结界突破</span>
+										</p>
+										<i>作者：绯蜂</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【新手】 为美腻小姐姐奋斗！平民过【妖刀本】</span>
+										</p>
+										<i>作者：绯蜂</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【新手】 手把手教你玩“赚”结界突破</span>
+										</p>
+										<i>作者：零度</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										  <span>【新手】 【新手上路】狗粮队长鸦天狗</span>
+										</p>
+										<i>作者：小王同学</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【新手】 【新手】少走弯路，养式神的小技巧</span>
+										</p>
+										<i>作者：四婶</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										  <span>【新手】 灵动复活流【九命猫】</span>
+										</p>
+										<i>作者：蛇喰梦子</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【新手】 【萌新】平民快速崛起成长途径~</span>
+										</p>
+										<i>作者：释然</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【新手】 【石距】40级宝船~正确击倒方式！</span>
+										</p>
+										<i>作者：零度</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【新手】 【萌新】常见增、减益效果图标辨识</span>
+										</p>
+										<i>作者：潘家小金莲</i>
+								   </a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【新手】 阴阳师速度与拉条终极奥义:为何被超车</span>
+										</p>
+										<i>作者：BronzeKey</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【式神】 持弓少女——易养成单点爆伤【白狼】</span>
+										</p>
+										<i>作者：晓羽</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										  <span>【式神】 最初开始，爱下雪的强控式神【雪女】</span>
+										</p>
+										<i>作者：晓羽</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										  <span>【式神】 单体克星！后手流核心——【椒图】！</span>>
+										</p>
+										<i>作者：阿尔杰塔的小跟班</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【式神】 【协同斗技】主流辅助式神解析！</span>
+										</p>
+										<i>作者：酱酱酱丶</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【式神】 超强单体40米大砍刀！【妖刀姬】</span>
+										</p>
+										<i>作者：释然</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										<span>【式神】 【鬼使白】！不为人所知的冷门战神！</span>
+										</p>
+										<i>作者：阿迪</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【式神】 【斗技】核心输出的培养推荐分析</span>
+										</p>
+										<i>作者：blue</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【式神】 椒图的劲敌！爱吃花甲的【饿鬼】！</span>
+										</p>
+										<i>作者：天晴</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										  <span>【式神】 SSR奶，画中的小姐姐【花鸟卷】</span>
+										</p>
+										<i>作者：八西轰</i>
+								   </a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【式神】 花瓣与旗，治疗之争</span>
+										</p>
+										<i>作者：小光</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【斗技】 持弓少女——易养成单点爆伤【白狼】</span>
+										</p>
+										<i>作者：晓羽</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【斗技】 最初开始，爱下雪的强控式神【雪女】</span>
+										</p>
+										<i>作者：晓羽</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【玩法】 平民向！4星辅助过【红叶本】十层！</span>
+										</p>
+										<i>作者：真白</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【御魂】 专业挡刀！闪现~！薙(TI)魂篇</span>
+										</p>
+										<i>作者：小王同学</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【斗技】 【黑童子】——疯狂的二十连斩！</span>
+										</p>
+										<i>作者：释然</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										  <span>【斗技】 目标八段——奥义！地藏反手流！</span>
+										</p>
+										<i>作者：阿迪</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【斗技】 破尽万法！御魂被动克星鬼面【般若】</span>
+										</p>
+										<i>作者：blue</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【斗技】 反伤流克星【海坊主】</span>
+										</p>
+										<i>作者：blue</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【斗技】 疯狂带节奏-节奏狂人【烟烟罗】</span>
+										</p>
+										<i>作者：释然</i>
+								   </a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										  <span>【玩法】 【业原火】痴之阵推荐过关配置</span>
+										</p>
+										<i>作者：穷人</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										  <span>【玩法】 为美腻小姐姐奋斗！平民过【妖刀本】</span>
+										</p>
+										<i>作者：零度</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										  <span>【玩法】 人形之舞~如何咸鱼流过红叶10层</span>
+										</p>
+										<i>作者：小光</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【玩法】 手把手教你玩“赚”结界突破</span>
+										</p>
+										<i>作者：真白</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【玩法】 平民向！4星辅助过【红叶本】十层！</span>
+										</p>
+										<i>作者：小王同学</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【玩法】 【萌新】平民快速崛起成长途径~</span>
+										</p>
+										<i>作者：释然</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										 <span>【玩法】 山兔大暴走 &nbsp;尬舞指南</span>
+										</p>
+										<i>作者：松烟</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【玩法】 红叶的羁绊 平民通关攻略</span>
+										</p>
+										<i>作者：blue</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										   <span>【玩法】 【阴界之门】平民20分钟速通50层</span>
+										</p>
+										<i>作者：blue</i>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+										<p>
+										   <b></b>
+										  <span>【玩法】 【石距】40级宝船~正确击倒方式！</span>
+										</p>
+										<i>作者：零度</i>
+								   </a>
+								</li>
+							</ul>
+						   </div>
+						</div>
+					</div>
+			 </div>	
+			 <!--阴阳师同人专区-->
+			 <div id="tongren">
+	     <!--同人nav头部-------------------------------->
+	     <div class="tongren_nav">
+			       <!--这是一个同人图标-->
+						<b></b>
+						<ul>
+									<li data-j="0">
+									     <a href="#">
+											     <!--这是文字-->
+														<span>
+																<i></i>
+														</span>
+														<!--这是图-->
+														<s></s>
+											 </a>
+									</li>
+									<li data-j="1">
+									     <a href="#">
+											     <!--这是文字-->
+														<span>
+																<i></i>
+														</span>
+														<!--这是图-->
+														<s></s>
+											 </a>
+									</li>
+									<li data-j="2">
+									     <a href="#">
+											     <!--这是文字-->
+														<span>
+																<i></i>
+														</span>
+														<!--这是图-->
+														<s></s>
+											 </a>
+									</li>
+									<li data-j="3">
+									     <a href="#">
+											     <!--这是文字-->
+														<span>
+																<i></i>
+														</span>
+														<!--这是图-->
+														<s></s>
+											 </a>
+									</li>
+									<li data-j="4">
+									     <a href="#">
+											     <!--这是文字-->
+														<span>
+																<i></i>
+														</span>
+														<!--这是图-->
+														<s></s>
+											 </a>
+									</li>
+									<li data-j="5">
+									     <a href="#">
+											     <!--这是文字-->
+														<span>
+																<i></i>
+														</span>
+														<!--这是图-->
+														<s></s>
+											 </a>
+									</li>
+									<li class="tougao"></li>
+						</ul>
+						<!--这是一个投稿图标-->
+											<a href="#">
+										 </a>
+			 </div>
+			 <!--同人内容部分-->
+			 <div class="tongren_photo">
+						<div class="big_tongren">
+									<ul>
+												<li>
+												   <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/tj_1.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>好好改造重新做人【作者】君颜组</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/tj_2.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>精选推荐周榜TOP3</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/tj_3.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>混搭九宫【作者】霈_脱非如欧</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/tj_4.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>狗仔【作者】gacha-不知是煜</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/tj_5.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>喵咪两小无猜【作者】向日喵小葵</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/tj_6.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>狗仔【作者】第狸优公子</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/tj_7.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>脑洞大开【作者】gacha-KAKYUU</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/tj_8.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>非洲人的男神们【作者】知心的花英俊</span>
+																</p>
+													 </a>
+												</li>
+									</ul>
+									<ul>
+												<li>
+												   <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/hh_1.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>阴阳师日常【作者】-讨个吉祥-</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/hh_2.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>高校paro【作者】二宫塔塔</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/hh_3.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>一个女儿节脑洞【作者】用生命调戏真爱</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/hh_4.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>抓机版版头QUQ【作者】苗疆月月影</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/hh_5.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>卖萌小剧场！【作者】恒温_</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/hh_6.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>平安经怪谈【作者】KuguKiugu</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/hh_7.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>晴博梗【作者】子渣</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/hh_8.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>式神一锅炖短篇集【作者】晋江呱瓜呱&蒼...</span>
+																</p>
+													 </a>
+												</li>
+									</ul>
+									<ul>
+												<li>
+												   <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/cos_1.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>青行灯cos【作者】临晨Jessica</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/cos_2.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>Cosplay周榜TOP3</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/cos_3.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>白狼-森林之姬【作者】Hana_哈啦啾</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/cos_4.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>执狐之爪，与狐嗯哼。【作者】kaki蝎_小贤我妻x &amp;千影__大帅比</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/cos_5.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>一发入魂的小姐姐！【作者】浮生叹温凉</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/cos_6.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>与我一同堕入这无尽地狱吧...【作者】春山&amp;彤彤</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/cos_7.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>大天狗cos【作者】旋律Melody</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/cos_8.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>为琴而生，为音成魔【作者】白鹭非露</span>
+																</p>
+													 </a>
+												</li>
+									</ul>
+									<ul>
+												<li>
+												   <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/sp1.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>烟月春和 唤醒沉睡的辉夜姬小姐姐【作者】</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/sp2.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>身负紫藤足踏白雪 小鹿男新皮肤紫苑藤雪【作者】</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/sp3.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>樱雨刀舞特典皮肤鉴赏【作者】</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/sp4.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>卖萌不如跳舞【作者】</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/sp5.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>新番外 见习鬼使的故事【作者】</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/sp6.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>#阴阳师新年祭# 声优齐送祝福【作者】阴阳师手游</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/sp7.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>姑获鸟新皮肤 金銮鹤羽【作者】</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/sp8.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>原创编舞 萌萌萤草【作者】2TIG#阴阳师MMD大赛【作者】2TIG</span>
+																</p>
+													 </a>
+												</li>
+									</ul>
+									<ul>
+												<li>
+												   <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/xs_1.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>《论阴阳师生存的1000种错误方法》 01【作者】南乔木＃阴阳师同人文大赛＃</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/xs_2.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>好萌的神乐！【作者】法定假日的粘土手办</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/xs_3.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>银装素裹【作者】貔貅未满＃阴阳师同人文大赛＃</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/xs_4.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>妖狐疑似吃到了变质达摩【作者】陆杰斐＃阴阳师同人文大赛＃</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/xs_5.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>【德艺双馨】非酋的年会【作者】佚川＃阴阳师同人文大赛＃</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/xs_6.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>金鸾鹤羽【作者】灰白奖章＃阴阳师同人文大赛＃</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/xs_7.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>非洲大草原新闻合集【作者】弦上雪＃阴阳师同人文大赛＃</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/xs_8.jpg">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>在成为黑晴明的日子里（十）【作者】Kuffskein＃阴阳师同人文大赛＃</span>
+																</p>
+													 </a>
+												</li>
+									</ul>
+									<ul>
+												<li>
+												   <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/tu_1.png">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																	<span>血火平安京：尾声【作者】咖啡有害健康＃阴阳师同人文大赛＃</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/tu_2.png">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>好萌的神乐！【作者】法定假日的粘土手办</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/tu_3.png">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>新皮肤小鹿粘土！【作者】霈_八月十八</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/tu_4.png">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>软陶制作的夜叉【作者】言寺金禹</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/tu_5.png">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>大小号蝴蝶精【作者】手工粘土的潼潼</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/tu_6.png">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>给姑姑做的新衣【作者】第五橙粘土手办</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/tu_7.png">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>两只小桃花妖【作者】阿布的豆豆</span>
+																</p>
+													 </a>
+												</li>
+												<li>
+												    <a href="#">
+													      <!--这是一张图-->
+													     <img src="images/tu_8.png">
+															 <!--这是一张隐藏图-->
+															  <b>
+																    <i></i>
+																</b>
+																<p>
+																		<span>来一波式神【作者】进击的阿夹</span>
+																</p>
+													 </a>
+												</li>
+									</ul>
+						</div>
+			 </div>
+	</div>
+  </section>
+  <!--**************** 4、活动专区**************** -->
+  <footer id="activity" class="clear">
+	<!--阴阳师视频专区-------------------------------------->
+	<div id="yys_tv">
+	    <div class="tv_show clear">
+			      <!--左边YYS视频-->
+			     <div class="left_tv">
+					    <p></p>
+							<a href="#">
+							    <img src="images/yys_tv1.jpg">
+									<span>《阴阳师》核心玩法</span>
+							</a>
+							<a href="#" class="margin_right">
+							    <img src="images/yys_tv6.jpg">
+									<span>《阴阳师》声优阵容</span>
+							</a>
+							<a href="#">
+							    <img src="images/yys_tv5.jpg">
+									<span>【阴阳师X极乐净土】抽式神不如跳舞</span>
+							</a>
+					 </div>
+					  <!--右边YYS壁纸-->
+						<div class="wallpaper left_tv">
+									<p></p>
+							<a href="#">
+							    <img src="images/yys_tv2.jpg">
+									<span>游戏场景原画</span>
+							</a>
+							<a href="#" class="margin_right">
+							    <img src="images/yys_tv3.jpg">
+									<span>游戏场景原画</span>
+							</a>
+							<a href="#">
+							    <img src="images/yys_tv4.jpg">
+									<span>游戏角色原画</span>
+							</a>
+						</div>
+			</div>
+	</div>
+  <!--活动专区图片 -------------------------------------->
+    <div class="activity_img"></div>
+	<ul class="clear">
+		<li class="xsy">
+			<a href="#">
+				<span class="huodong">同人文征集</span>
+				<img src="images/activity_2.png">
+			</a>
+		</li>
+		<li class="xsy">
+			<a href="#">
+				<span class="huodong">《阴阳师》首届MMD大赛华丽开启！</span>
+				<img src="images/activity_3.png">
+			</a>
+		</li>
+		<li class="xsy">
+			<a href="#">
+				<span class="huodong">天机谱：有奖攻略互动计划</span>
+				<img src="images/activity_4.png">
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<span class="huodong">论坛活动，参与有奖</span>
+				<img src="images/activity_5.png">
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<span class="huodong">绝美启幕，敬请期待！</span>
+				<img src="images/activity_6.png">
+			</a>
+		</li>
+	</ul>
+  <!--客户服务专区 -->
+	<!--1、阴阳师活动专区图标 -->
+	<div id="serve">
+		<a href="#" class="logo"></a>
+	</div>
+	<!--2、官方微博 -->
+	<div class="microblog">
+		<div class="box_1">
+			<div class="box_2">
+			   <!--二维码-->
+			   <img src="images/logo7.png">
+			</div>
+			<div class="box_text">
+				<p>关注官方微博</p>
+				<p>扫描二维码</p>
+				<i></i>
+			</div>
+			<span class="line"></span>
+			<a href="#">
+			 微博名:
+			 <span>网易阴阳师手游</span>
+			</a>
+ 		</div>
+	</div>
+	<!--3、微信公众号 -->
+	<div class="microblog">
+		<div class="box_1">
+			<div class="box_2">
+			   <!--二维码-->
+			   <img src="images/logo6.png">
+			</div>
+			<div class="box_text">
+				<p>关注微信公众号</p>
+				<p>扫描二维码</p>
+				<b></b>
+			</div>
+			<span class="line"></span>
+			<b>
+			 公众号:
+			 <span>yingyangshi163</span>
+			</b>
+ 		</div>
+	</div>
+	<!--4、客户服务热线 -->
+	 <!--电话图标-->
+    <div id="tel-phone" >
+		<div id="phone"></div>
+		<p>客户服务电话</p>
+		<p class="tel">0517-26201179</p>
+		<span id="xian"></span>
+		<span id="BUG"><a href="#">BUG反馈,游戏问题</a></span>
+    </div> 
+	<div id="return" class="clear">
+		<a href="#"></a>
+	</div>
+  </footer>
+  <!--**************** 5、页面底部**************** -->
+  <footer id="foot_box">
+     <div id="foot_1">
+			<!-- 阴阳师-->
+				<span></span>
+       <a href="#">
+						<!-- 前去体验-->
+						<b></b>
+						<div>
+						<!--隐藏二维码-->
+						   <img src="images/logo7.png">
+							 <!--文字-->
+							<p></p>
+					 </div>
+						<!-- 白色棒棒糖-->
+						<i></i>
+						<!-- 门-->
+						<s></s>
+			</a>
+	 </div>
+  </footer>
+  <!--**************** 6、页面尾部**************** -->
+  <footer id="footer" class="clear">
+     <!--1、分享 -->
+	 <div id="share">
+		<ul>
+		  <li>分享到:</li>
+		  <li>
+			<!--微信图标 -->
+				<a href="#">
+						<i></i>微信
+				</a>
+		  </li>
+		  <li>
+			<!--易信图标 -->
+				<a href="#">
+						<i></i>易信
+				</a>
+		  </li>
+		  <li>
+			<!--新浪微博图标 -->
+				<a href="#">
+						<i></i>新浪微博
+				</a>
+		  </li>
+		  <li>
+			<!--QQ空间图标 -->
+				<a href="#">
+					<i></i>QQ空间
+				</a>
+		  </li>
+		</ul>
+	 </div>
+     <!--2、网易LOGO -->
+	 <div id="copy">
+	     <!--网易图标 -->
+	     <s></s>
+		 <!--网易游戏图标 -->
+		 <i></i>
+		 <span><a href="#">公司简介</a> - <a href="#">客服服务</a> - <a href="#">相关法律</a> - <a href="#">联系我们</a> - <a href="#">商务合作</a> - <a href="#">加入我们</a> - <a href="#">用户协议</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;网易公司版权所有 &copy;1997-2017</span>
+         <b><a href="#">点击查看家长监护工程&nbsp;></a></b>
+	 </div>
+	 <!--3、底部文字信息 -->
+	 <div id="text">
+	    <span>
+		本游戏适合16岁以上的玩家进入。<br>积极健康的游戏心态是健康游戏的开端，本游戏故事情节设置紧凑，请您合理控制游戏时间，避免沉溺游戏影响生活，注意自我保护，防范网络陷阱。<br><a href="#">《网络游戏管理暂行办法》</a>&nbsp;文网游备字【2016】M-RPG4708号《网络经营文化许可证》浙网文[2016]0155-055号
+		</span>
+	 </div>
+  </footer>
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/yys.js"></script>
+ </body>
+</html>

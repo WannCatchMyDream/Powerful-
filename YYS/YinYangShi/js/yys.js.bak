@@ -1,0 +1,300 @@
++function(){
+	//这里是刷新页面自动启动动画
+window.onload=function(){
+ $(".wisdom").css({
+   top:"118",
+   opacity:"1",
+ });
+ $("#banner_top>span").css({
+   left:"0",
+   opacity:"1",
+ })
+ $(".gril_img").css({
+   top:"55",
+   opacity:"1",
+   zIndex:"0",
+ })
+ $(".boy_img").css({
+   top:"93",
+   opacity:"1",
+   zIndex:"0",
+ })
+ $("#top_logo").css("opacity","1")
+}
+   //这里是a标记点击回到窗口
+   $(".banner_main>.banner_main_border>.banner_main_a").click(function(){
+     $(this).css("display","none").siblings().css("display","none").parent().parent().css({
+	  left:"75%",
+	  width:"360px",
+	 }).children().last().css("display","block").click(function(){
+	   $(this).css("display","none").siblings().children().css("display","block").parent().parent().css({
+	    left:"49.5%",
+		width:"390px",
+	   })
+	  });
+   });
+   //这是新闻身体部分
+   $(".news_top>a").mouseenter(function(){
+	   var $b=$(".news_list");
+	   var $a=$(this);
+	   var s=parseFloat($b.css("width"));
+	   var n=$a.attr("data-i");
+     $a.parent().next().children().css("left",n*(-s/5)+"px");
+	 $a.children("b").css("opacity","1").parent().siblings().children("b").css("opacity","0");
+   });
+	//这是攻略部分
+   $(".right_search>.actor_top>a").mouseenter(function(){
+	   var $a=$(this);
+	   var $b=$(".rgt_title");
+	   var s=parseFloat($b.css("width"));
+	   var n=$a.attr("data-n");
+      $a.parent().next().children().css("left",n*(-s/5)+"px");
+	   $a.children("s,i").css("opacity","1").parent().siblings().children("s").css("opacity","0"); 
+   });
+	  //这是同人专区
+   $(".tongren_nav>ul>li").mouseenter(function(){
+      var $li=$(this);
+	  var $d=$(".big_tongren");
+	  var s=parseFloat($d.css("width"));
+	  var n=$li.attr("data-j");
+	  $li.parent().parent().next().children().css("left",n*(-s/6)+"px");
+	  $li.find("span").css("top","3px"
+	  ).parent().parent().siblings().find("span").css("top","18px")
+	 $li.find("s").css("bottom","-20px"
+	  ).parent().parent().siblings().find("s").css("bottom","-75px")
+   });
+	  //这是新闻公告旁边的轮播图
+	  var imgs=[
+		"images/index1.jpg",
+		"images/index2.jpg",
+		"images/index3.jpg",
+		];
+	  +function(){	
+		var	WIDTH=parseFloat($("#main_left").css("width"));//获得容器的宽度
+	    var $divImgs=$(".left_img"), $divIdexs=$("#main>.left_nav");//保存
+		var n=0;//定义下标
+		var WAIT=2000;//定义播放切换时间
+		var SPEED=300;//定义播放速度
+		var canAuto=true;//定义是否能自动播放
+		var timer=null;//定义定时器
+		 +function(){
+			for(i=0,htmlImgs="",htmlIdexs="";i<imgs.length;i++){
+			  htmlImgs+="<a href='#'><img src='"+imgs[i]+"'></a>";
+			  htmlIdexs+="<a href='#'></a>"; 
+			}
+			//将代码片段添加到a中
+				$divImgs.html(htmlImgs);
+				$divIdexs.html(htmlIdexs);
+		//修改$divImgs的宽
+		$divImgs.css("width",WIDTH*(imgs.length+1));
+		$divImgs.append(
+		 //复制$divImgs的第一个元素，再追加到结尾
+			$divImgs.children(":first").clone()	 
+		 );
+		 //设置$divIdexs中第一个li默认为hover
+		$divIdexs.children(":first").addClass("hover").siblings().removeClass("hover");
+		 }();
+        function autoMove(){//启动自动轮播 
+		   timer=setTimeout(function(){
+		   n++;//将当前图片的下标+1
+		   //延迟WAIT毫秒,再启动动画,将$divImgs的left移动到-n*WIDTH的位置
+		   $divImgs.animate({
+			left:(-n)*WIDTH
+			},SPEED,function(){//动画结束后
+		   //如果是最后一张(n等于imgs的length)
+			if(n==imgs.length){
+				n=0;//将n改回0
+				$divImgs.css("left",0);//将$divImgs的left归0
+			 }
+	   //设置$divIdexs中n位置的li为hover，清除其它hover
+	   $divIdexs.children(":eq("+n+")").addClass("hover").siblings().removeClass("hover");
+		   if(canAuto) autoMove();//再次启动自动轮播
+		  });
+		 },WAIT);
+		};
+        autoMove();//实现手动轮播
+	 //为$divIdexs添加鼠标进入事件委托,只允许li响应
+	 $divIdexs.on("mouseover","a",function(){
+	  //停止$divImgs上的一切动画
+	  $divImgs.stop(true);
+		//修改n为当前li的下标: 
+		n=$("#main>.left_nav>a").index(this);
+		//让$divImgs移动到-n*WIDTH的位置
+		$divImgs.animate({
+		  left:(-n)*WIDTH
+		},SPEED,function(){
+		     //设置$divIdexs中n位置的li为hover，清除其它hover
+		   $divIdexs.children(":eq("+n+")").addClass("hover").siblings().removeClass("hover");	
+		   });
+	 });
+//鼠标进入区域，修改标记禁止继续自动轮播
+		$("#main_left").mouseenter(function(){
+			canAuto=false;
+			clearTimeout(timer);
+		}).mouseleave(function(){//鼠标离开,重启自动轮播
+		canAuto=true;//修改标记允许继续自动轮播
+		//让n退回前一个下标
+		autoMove();
+		});
+	  }();
+	
+	  
+	  
+	  //这里是两个图的轮播
+	  var img=[
+		"images/hl_1.jpg",
+		"images/hl_2.jpg",	  
+	  ];
+	  +function(){
+		var WIDTH=parseFloat($(".no_img").css('width'));//获得容器的宽度
+		var WAIT=3000;//定义切换的时间
+		var SPEED=400;//定义播放的速度
+	    var $divImg=$(".two_img"),$divIdx=$(".rad_black");//保存
+		var n=0;//定义下标
+		var canAuto=true;//定义是否能自动播放
+		var timer=null;//定义定时器
+		+function(){
+		   for(i=0,htmlImgs="",htmlIdexs="";i<img.length;i++){
+			  htmlImgs+="<a href='#'><img src='"+img[i]+"'></a>";
+			  htmlIdexs+="<a href='#'></a>"; 
+			}
+				//将代码片段添加到a中
+				$divImg.html(htmlImgs);
+				$divIdx.html(htmlIdexs);
+		//修改$divImgs的宽
+		$divImg.css("width",WIDTH*(img.length+1));
+		$divImg.append(
+		 //复制$divImgs的第一个元素，再追加到结尾
+			$divImg.children(":first").clone()	 
+		 );
+	    //设置$divIdexs中第一个li默认为hover
+		$divIdx.children(":first").addClass("hover").siblings().removeClass("hover"); 
+		}();
+		function autoMove(){//启动自动轮播 
+		   timer=setTimeout(function(){
+		   n++;//将当前图片的下标+1
+		   //延迟WAIT毫秒,再启动动画,将$divImgs的left移动到-n*WIDTH的位置
+		   $divImg.animate({
+			left:(-n)*WIDTH
+			},SPEED,function(){//动画结束后
+		   //如果是最后一张(n等于imgs的length)
+			if(n==img.length){
+				n=0;//将n改回0
+				$divImg.css("left",0);//将$divImgs的left归0
+			 }
+	   //设置$divIdexs中n位置的li为hover，清除其它hover
+	   $divIdx.children(":eq("+n+")").addClass("hover").siblings().removeClass("hover");
+		   if(canAuto) autoMove();//再次启动自动轮播
+		  });
+		 },WAIT);
+		};
+        autoMove();//实现手动轮播
+	 //为$divIdexs添加鼠标进入事件委托,只允许li响应
+	 $divIdx.on("mouseover","a",function(){
+	  //停止$divImgs上的一切动画
+	  $divImg.stop(true);
+		//修改n为当前li的下标: 
+		n=$(".rad_black>a").index(this);
+		//让$divImgs移动到-n*WIDTH的位置
+		$divImg.animate({
+		  left:(-n)*WIDTH
+		},SPEED,function(){
+		     //设置$divIdexs中n位置的li为hover，清除其它hover
+		   $divIdx.children(":eq("+n+")").addClass("hover").siblings().removeClass("hover");	
+		   });
+	 });
+//鼠标进入区域，修改标记禁止继续自动轮播
+		$(".no_img").mouseenter(function(){
+			canAuto=false;
+			clearTimeout(timer);
+		}).mouseleave(function(){//鼠标离开,重启自动轮播
+		canAuto=true;//修改标记允许继续自动轮播
+		//让n退回前一个下标
+		autoMove();
+		});
+	  }();
+
+
+	  /**头部滚动事件**/
+	  +function(){
+		/*头部滚动事件**/
+		var wh=$('body').height();
+		$(window).scroll(function(){
+		if($('body').scrollTop()!==0){
+		$('#banner_top>.logo').css({
+		 transform:"scale(0,0)",
+		 transition:"transform .2s linear"
+		});
+		 $('.left_bar').css("opacity","1");
+		$('#top_bar').css({
+		background:"rgba(255,255,255,.9)",
+		position:"fixed",
+		});
+		$(".right_bar>li").css("left","-5px");
+		 }else{
+		$('#banner_top>.logo').css({
+		 transform:"scale(1,1)",
+		 transition:"transform .2s linear"
+		});
+		$('.left_bar').css("opacity","0");
+		$('#top_bar').css({
+		background:"rgba(255,255,255,0)",
+		position:"relative",
+		});
+		$(".right_bar>li").css("left","0px");
+		 }
+	   })
+	}();
+
+
+	   	   /*这里是图标点击SSR的地方*/
+	   +function(){
+		    var WIDTH=parseFloat($(".rongqi").css("width"));//获取所有图标父元素的总宽度
+			var P=parseFloat($(".ssr_tubiao").css("width"))+45;//获取页面容器的宽度
+			var N=WIDTH/P;//表示总的页数
+			var i=0;
+		+function(){
+		  $(".right_arrows").on("click",function(e){
+			i++;console.log(i);
+			var $a=$(this);
+			e.preventDefault();
+		   if(i<N){
+			$a.prev().css("display","block").next().next().children().css("left",-P*i+"px");	
+		   }
+			if(i>N-1){
+			$a.css("display","none");
+			}
+		   });
+			$(".left_arrows").on("click",function(e){
+			i--;console.log(i); 
+			if(i=>1){
+			var $b=$(this);
+			e.preventDefault();
+		    $b.next().css("display","block").next().children().css("left",-P*i+"px");
+			}
+			if(i<1){
+			$b.css("display","none");
+			}
+		 });
+		}();
+	  }();
+
+	  /*猪脚信息栏**/
+	  +function(){
+	    var $qm=$(".qm");
+		$qm.siblings(":not('.nan_zhujue')").addClass("none");
+		$(".nan_zhujue>a").click(function(e){
+		 e.preventDefault();//阻止a标记跳转行为;
+		  var $a=$(this);
+		  var n=$a.attr("data-x");
+		  $a.addClass("target").siblings().removeClass("target").parent().siblings(":eq("+n+")").removeClass("none").siblings(":not('.nan_zhujue')").addClass("none");
+		});
+		/*这里是切换猪脚和弑神的地方*/
+		$(".actor_top>a").click(function(e){
+		 e.preventDefault();
+		 var $b=$(this);
+		 var y=$b.attr("data-y");
+		 $b.children("s").css("opacity","1").parent().siblings().children("s").css("opacity","0").parent().parent().siblings(":eq("+y+")").css("opacity","1").siblings(":not('.actor_top')").css("opacity","0");
+		});
+	  }();
+}();

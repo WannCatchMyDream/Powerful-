@@ -1,0 +1,11 @@
+SET NAMES UTF8;
+DORP DATABASE IF EIXSTS yys;
+CREATE DATABASE yys CHARACTER SET utf8;
+use yys;
+CREATE TABLE t_user(
+ id int primary key auto_increment,
+ email varchar(64),
+ pwd   varchar(32),
+ upwd  varchar(32),
+ phone         int);
+INSERT INTO t_user VALUES(null,'123@qq.com','123456','123456',18867210001);

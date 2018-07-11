@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="EditPlus®">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<link rel="stylesheet" href="../css/yys_zc.css">
+	<title>Document</title>
+	<style>
+		input.error {
+			box-shadow: 0 0 6px red;
+			background: lightYellow;
+
+		}
+
+		label.error {
+			color: #e4393c;
+			padding: 6px 10px;
+			margin-left: 10px;
+			position: relative;
+			left: 650px;
+			bottom: 65px;
+			text-align: left;
+		}
+
+		#code {
+			color: #ffffff;
+			/*字体颜色白色*/
+			background-color: #9ec5e3;
+			width: 50px;
+			font-size: 19pt;
+			padding: 5px 35px 10px 35px;
+			margin-left: 0.5%;
+			position: relative;
+			top: 16px;
+			cursor: pointer;
+		}
+
+		.btn_Login {
+			color: red;
+		}
+
+		#emailTip,
+		.tip {
+			position: relative;
+			top: 25px;
+			left: 5px;
+		}
+
+		#emailTip i,
+		.tip i {
+			background: url("../images/sprite.png") no-repeat -26px -98px;
+			width: 22px;
+			height: 22px;
+			display: block;
+			float: left;
+			position: relative;
+			top: 0px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- *************页面头部************ -->
+	<header id="head">
+		<div class="hdr">
+			<a href="#">
+				<div></div>
+			</a>
+			<div class="login">
+				已有帐号？去
+				<a id="btn_Login" href="#">登录</a>
+			</div>
+		</div>
+
+	</header>
+	<!-- *************验证部分************ -->
+	<div class="reg">
+		<p>注册账号</p>
+		<div class="reg_y">
+			<form action="php/yys_zhuce.php" method="post" id="form-msg">
+				<div class="zc">
+					<label for="email">账号&nbsp;:&nbsp; </label>
+					<input type="text" id="email" name="email" placeholder="网易邮箱/其他邮箱" class="e-mail">
+					<span id="emailTip" style="color:#E4393C"></span>
+				</div>
+				<div class="zc">
+					<label for="pwd">密码&nbsp;:&nbsp; </label>
+					<input type="password" name="pwd" placeholder="6-16位密码,区分大小写" class="e-mail" id="pwd" value="">
+					<span style="color:green"></span>
+				</div>
+				<div class="zc">
+					<label for="upwd">确认密码&nbsp;:&nbsp; </label>
+					<input type="password" name="upwd" placeholder="再次输入密码" class="e-mail" id="upwd">
+					<span style="color:green" class="tip"></span>
+				</div>
+				<!-- 					<div class="zc">
+						<label for="verify">验证码&nbsp;:&nbsp; </label>
+						<input type="text" id="vcode"  placeholder="验证码" value="" class="e-mail in"/>
+						<span id="code" title="看不清，换一张">点击换图</span>  
+					</div> -->
+				<div class="zc">
+					<label for="phone">手机号&nbsp;:&nbsp; </label>
+					<input type="text" name="phone" placeholder="11位手机号" class="e-mail">
+					<span style="color:green"></span>
+				</div>
+				<div class="mm">密码忘记时,可通过手机快速找回密码</div>
+				<!-- 					<div class="zc">
+						<label for="dxyz">短信验证&nbsp;:&nbsp; </label>
+						<input type="text" name="dx" placeholder="输入短信验证" maxlength="6" class="e-mail in">
+						<span class="btn">获取验证码</span>
+					</div> -->
+				<div class="r-btn">注&nbsp;&nbsp;册</div>
+				<div class="title">
+					<span>
+						用户注册即代表同意
+						<a target="_blank" href="#">《服务条款》</a>
+						和
+						<a target="_blank" href="#">《网络游戏用户隐私保护和个人信息利用政策》</a>
+					</span>
+				</div>
+			</form>
+		</div>
+		<div>
+			<a href="#" class="xiazai">
+				<img src="../images/zuce.png" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="footer">
+			<div>
+				<p>
+					<a href="#" target="_blank">About NetEase</a>-
+					<a href="#" target="_blank">公司简介</a>-
+					<a href="#" target="_blank">联系方式</a>-
+					<a href="#" target="_blank">OAuth2.0认证</a>-
+					<a href="#" target="_blank">招聘信息</a>-
+					<a href="#" target="_blank">客户服务</a>-
+					<a href="#" target="_blank">相关法律</a>-
+					<a href="#" target="_blank">网络营销</a>-
+				</p>
+				<p>网易公司版权所有 ©1997-2017</p>
+			</div>
+		</div>
+	</div>
+	<script src="../js/jquery-1.11.3.js"></script>
+	<script src="../js/jquery.validate.js"></script>
+	<script>
+		$("input").focus(function () {
+			var $this = $(this);
+			$this.css("box-shadow", "0 0 6px blue");
+			$this.next().html("");
+			$this.siblings("span").children().remove();
+			$this.siblings("span").html("");
+		})
+
+		$("input").blur(function () {
+			var $this = $(this);
+			$this.css("box-shadow", "");
+			//		  if($this.nextSibling().html("")){
+			//		   console.log("验证通过");}
+		})
+		$("#upwd").blur(function () {
+			console.log($(this).val());
+			if (($(this).val() == $("#pwd").val()) && ($(this).val() != "")) {
+				$(this).siblings("span").html("<i></i>");
+			}
+			//		  if($(this).value==undefined){
+			//		   $(this).siblings("span").html("");
+			//		  }
+		})
+		$.validator.addMethod("phone", function (val) {
+			return /^1[34578]\d{9}$/.test(val)
+		}, "手机号格式不正确");
+		$("#form-msg").validate({
+			focusInvalid: false,
+			rules: {
+				pwd: {
+					required: true,//必填
+					//minlength:6,//最小长度
+					//maxlength:8,//最大长度
+					rangelength: [6, 16]//长度范围
+				},
+				email: { required: true, email: true, },
+				upwd: { equalTo: "#pwd" },
+				phone: "phone"
+			},
+			messages: {
+				pwd: {
+					required: "密码不能为空",
+					//minlength:"密码长度至少6位",
+					//maxlength:"密码长度最多8位",
+					rangelength: "密码长度必须介于6~16位之间"
+				},
+				email: {
+					required: "邮箱必填",
+					email: "邮箱格式不正确"
+				},
+				upwd: {
+					equalTo: "确认密码和密码不一致",
+					required: "密码不能为空"
+				},
+
+			}
+		})
+		$('.r-btn').click(function () {
+			if ($("#form-msg").valid()) {
+				$("#form-msg").submit();
+
+			}
+		});
+		email.onblur = function () {
+			//1:创建xhr对象
+			var xhr = new XMLHttpRequest();
+			//2:监听xhr的状态改变
+			//  xhr.onreadystatechange = function(){}
+			//  如果状态码200 如果接收完成
+			//	 获取数据
+			xhr.onreadystatechange = function () {
+				if (xhr.status == 200 && xhr.readyState == 4) {
+					emailTip.innerHTML = xhr.responseText;   //location.href="http://127.0.0.1/YYS/YinYangShi/YinYangShi.html";
+				}
+			}
+			//3:连接web服务器
+			xhr.open("GET", "php/yys_zhuce.php?email=" + this.value, true);
+			//4:发送请求服务器
+			xhr.send(null);
+		}
+	</script>
+	<!-- <script type="text/javascript">  
+	        var code;//声明一个变量用于存储生成的验证码  
+	        document.getElementById("code").onclick=  
+	        function changeImg(){  
+	            //alert("换图片");  
+	            var arrays=new Array(  
+	                '1','2','3','4','5','6','7','8','9','0',  
+	                'a','b','c','d','e','f','g','h','i','j',  
+	                'k','l','m','n','o','p','q','r','s','t',  
+	                'u','v','w','x','y','z',  
+	                'A','B','C','D','E','F','G','H','I','J',  
+	                'K','L','M','N','O','P','Q','R','S','T',  
+	                'U','V','W','X','Y','Z'               
+	            );  
+	            code='';//重新初始化验证码  
+	            //alert(arrays.length);  
+	            //随机从数组中获取四个元素组成验证码  
+	            for(var i=0;i<4;i++){  
+	            //随机获取一个数组的下标  
+	                var r=parseInt(Math.random()*arrays.length);  
+	                code+=arrays[r];  
+	                //alert(arrays[r]);  
+	            }  
+	            //alert(code);  
+	            document.getElementById('code').innerHTML=code;//将验证码写入指定区域  
+	        }         
+	          
+	        //效验验证码(表单被提交时触发)  
+	        function check(){  
+	            //获取用户输入的验证码  
+	            var input_code=document.getElementById('vcode').value;  
+	            //alert(input_code+"----"+code);  
+	            if(input_code.toLowerCase()==code.toLowerCase())  
+	            {  
+	                //验证码正确(表单提交)  
+	                return true;  
+	            }  
+	            alert("请输入正确的验证码!");  
+	            //验证码不正确,表单不允许提交  
+	            return false;  
+	        }  
+	    </script>    -->
+</body>
+
+</html>
